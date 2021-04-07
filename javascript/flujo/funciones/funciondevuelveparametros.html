@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion que devuelve parametros</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function restar(pNumero1, pNumero2) {
+            let resultado = pNumero1 - pNumero2; //local
+            //funcion que devuelve un parametro
+            return resultado;
+        }
+
+        let diferencia = restar(7, 4);
+
+
+        function calcularPar(pNumero) {
+            document.write(pNumero % 2 == 0);
+        }
+
+
+        calcularPar(diferencia);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

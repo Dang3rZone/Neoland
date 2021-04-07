@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul></ul>
+    </nav>
+
+
+    <script>
+
+        const secciones = new Array('Home', 'About', 'Services', 'Contact');
+
+        let ul = document.getElementsByTagName('ul')[0];
+
+        secciones.forEach(function (seccion) {
+            ul.innerHTML += `<li><a href="">${seccion}</a></li>`;
+        })
+
+
+
+    </script>
+</body>
+
+</html>

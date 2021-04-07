@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de parametros indefinidos</title>
+</head>
+
+<body>
+
+    <script>
+
+        mediaAritmetica(3, 4); // 3.5
+        mediaAritmetica(2, 3, 4); // 3
+        mediaAritmetica(8, 2, 2, 2, 3) //3.4
+
+        //las funciones de parametros indefinidos no pueden recibir parametros
+
+        function mediaAritmetica() {
+            //una funcion tiene una propieda que se llama arguments
+
+            //un lista de elementos en cualquier lenguaje se numero siempre de 0 a n-1 siendo N la longitud de lista
+
+            // console.log(arguments); // la listas
+            // console.log(arguments[4]); //me saca el valor en una posicion concreta - posicion 0
+
+            // console.log(arguments.length); //me devuelve la cantidad de elemento de la lista
+            let suma = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                suma += arguments[i];
+            }
+            let media = suma / arguments.length;
+            console.log(media);
+        }
+
+
+    </script>
+</body>
+
+</html>

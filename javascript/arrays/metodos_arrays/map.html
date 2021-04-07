@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+</head>
+
+<body>
+
+    <script>
+
+        //crea un array nuevo cuyo valor es el resultado de recorrer el array inicial aplicandole una funcion de mapeo a los elementos. 
+
+        const listaNumeros = new Array(1, 2, 23, 244, 55, 6, 7, 8);
+
+        const listaDobles = listaNumeros.map(numero => numero * 2);
+
+        console.log(listaDobles);
+        console.log(listaNumeros);
+
+        //opcion 2
+        let lista = new Array();
+
+        for (let numero of listaNumeros) {
+            let numeroDoble = numero * 2;
+            lista.push(numeroDoble);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

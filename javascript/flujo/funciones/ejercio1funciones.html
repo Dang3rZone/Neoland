@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones que devuelven parametros</title>
+</head>
+
+<body>
+
+    <script>
+
+        //procedimiento
+        function pintarNoticia(pTitulo, pTexto) {
+            document.write(`<article>
+                <h3>${pTitulo}</h3>
+                <p>${pTexto}</p> 
+            </article>`)
+        }
+
+        //devuelve un parametro
+        function contarPalabraTitulo(pTitulo) {
+
+            let numeroPalabras = pTitulo.length;
+
+            return numeroPalabras
+            //no hay nada mas
+        }
+
+
+        let nPalabrasJuan = contarPalabraTitulo('Juan Antonio')
+
+
+
+    </script>
+
+</body>
+
+</html>

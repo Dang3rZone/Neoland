@@ -1,0 +1,5 @@
+<div class="libro" *ngFor="let libro of listaLibros">
+    <h4>{{ libro.titulo }}</h4>
+    <img [src]="libro.imagen" alt="">
+    <p>{{ libro.publicado }}</p>
+</div>

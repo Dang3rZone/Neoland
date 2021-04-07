@@ -1,0 +1,18 @@
+<p>PÁGINA : {{ currentPage }} / {{ numPages }}</p>
+
+<button (click)="onClick(false)" [disabled]="(currentPage === 1)">
+  Anterior
+</button>
+<button (click)="onClick(true)" [disabled]="(currentPage === numPages)">
+  Siguiente
+</button>
+
+<div class="characters">
+  <div class="character" *ngFor="let character of characters"
+    [ngClass]="{ alive: (character.status === 'Alive'), dead: (character.status === 'Dead')}">
+    <h3>{{ character.name }}</h3>
+    <img [src]="character.image" alt="">
+    <p>{{ character.species }}</p>
+    <p>{{character.status}}</p>
+  </div>
+</div>

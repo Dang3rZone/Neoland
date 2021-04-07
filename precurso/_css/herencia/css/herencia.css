@@ -1,0 +1,69 @@
+/* #wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+ */
+
+header {
+    background-color: red;
+}
+
+header div {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header nav {
+    background-color: salmon;
+}
+
+footer nav {
+    background-color: blue;
+}
+
+header nav ul li a {
+    color: white;
+}
+
+/* header nav ul li .enlace {
+    color: blue;
+} */
+
+/*pseudoselectores - pseudoclase */
+
+header nav ul li:first-child a {
+    color: blue;
+}
+
+header nav ul li:last-child a {
+    color: green;
+}
+
+header nav ul li:nth-child(2) a {
+    color: black;
+}
+
+footer nav ul li:nth-child(even) a {
+    color: tomato;
+}
+
+footer nav ul li:nth-child(odd) a {
+    color: black;
+}
+
+main section {
+    color: #74243b99;
+    background-color: rgba(23, 45, 134, 0.5);
+}
+
+.fuente {
+    font-size: 38px;
+}
+
+main section.fuente {
+    color: black;
+}
+
+footer aside.fuente {
+    color: red;
+}

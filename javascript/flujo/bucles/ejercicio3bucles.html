@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles ejercicio</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //quiero 10 poligonos los impares son cuadrados de color rojo y los pares son circulos de color negro.
+
+        const numeroPoligonos = 10;
+
+        for (var i = 1; i <= numeroPoligonos; i++) {
+            var color = (i % 2 != 0) ? 'red' : 'black';
+            var radio = (i % 2 != 0) ? '0%' : '50%';
+            
+            var poligono = '<div style="background-color: ' + color + '; margin: 10px; height: 100px; width: 100px; border-radius: ' + radio + ';"></div>';
+
+            document.write(poligono);
+        }
+
+        /* var contador = 1;
+        while (contador <= numeroPoligonos) {
+
+            contador++;
+        }
+ */
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array simple - vector</title>
+</head>
+
+<body>
+
+    <script>
+
+        const listaAlumnos = new Array('Beatriz', 'Elena', 'Jose Manuel', 'Samantha');
+        const listaAnimales = ['León', 'Camello'];
+
+        //array tiene longitud - propiedad del objeto Array dictamina la cantidad de elementos que tiene una lista.
+        console.log('1', listaAlumnos.length); //4
+
+        //acceder a los elementos de una lista, necesito saber que lista se numera de 0 a n-1 siendo n la longitud
+
+        console.log('2', listaAlumnos[1]); //Elena
+
+        //opcion 1
+
+        for (let i = 0; i < listaAlumnos.length; i++) {
+            console.log(i + '-' + listaAlumnos[i]);
+        }
+
+        //opcion 2 - forof
+        console.log('----');
+
+
+        let contador = 0;
+        for (let alumno of listaAlumnos) {
+            if (contador % 2 == 0) {
+                console.log(contador, alumno);
+            }
+            contador++;
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

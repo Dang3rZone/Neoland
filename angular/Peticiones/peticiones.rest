@@ -1,0 +1,14 @@
+POST https://randomnum.ngrok.io/random/num
+Content-Type: application/json
+Authorization: "lo que quieras"
+
+{
+    "min": 4,
+    "max": 12
+}
+
+###
+GET https://jsonplaceholder.typicode.com/posts
+
+###
+GET http://www.google.es

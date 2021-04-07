@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        //necesito una aplicacion que me permita controlar el stock de producto de una tienda de paraguas negros. Para ello necesito saber cuando stock tengo, necesito poder añadir producto a mi stock, y que me puedan comprar producto. Si tengo menos de 5 productos la aplicación me avisará de que hace falta comprar producto.
+
+        //necesito algo que almecene un numero total de productos. ej: 125
+
+        let stock = 125;
+
+        //mostrar el stock en pantalla en html -> arrow.
+
+        const mostrarStock = () => document.write(`<h1>Tu stock es ${stock}</h1>`);
+
+
+        //necesito algo que me permita aumentar mi stock;
+
+        const addProducto = function (pCantidad) {
+            stock += pCantidad; //stock = stock + pCantidad;
+            mostrarStock();
+        }
+
+        //necesito algo que me permita a un usuario comprar paraguas, puede comprar los paraguas que quiera.
+
+        const getProducto = pCantidad => {
+            if (pCantidad > stock) {
+                //no puedo servirte producto.
+                alert('No tengo suficiente paraguas, solo tengo ' + stock);
+            } else {
+                stock -= pCantidad; //stock = stock - pCantidad;
+                comprobarStock();
+            }
+        }
+
+
+        const comprobarStock = () => {
+            const STOCK_MINIMO = 5;
+            if (stock >= 0 && stock < STOCK_MINIMO) {
+                alert('tienes 5 productos o menos deberias comprar stock');
+            } else {
+                alert('tienes stock suficiente')
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

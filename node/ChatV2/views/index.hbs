@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="animate__animated animate__flash ">Neoland Chat</h2>
+            <h5 id="users"></h5>
+            <div class="main">
+                <i class="fas fa-envelope mb-4"></i> Mensajes Destacados
+                <hr>
+                <ul class="messages" id="mensajes">
+                </ul>
+            </div>
+            <div class="actions">
+                <div class="username">
+                    <label>Nombre</label>
+                    <input type="text" id="inputNombre" class="form-control">
+                </div>
+                <div class="message">
+                    <label>Mensaje</label>
+                    <input type="text" id="inputMensaje" class="form-control">
+                </div>
+                <button class="btn btn-info" id="btnEnviar">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const socket = io();
+
+    const inputNombre = document.getElementById('inputNombre');
+    const inputMensaje = document.getElementById('inputMensaje');
+    const btnEnviar = document.getElementById('btnEnviar');
+    const mensajes = document.getElementById('mensajes');
+    const users = document.getElementById('users');
+
+    btnEnviar.addEventListener('click', (event) => {
+        socket.emit('mensaje_chat', {
+            nombre: inputNombre.value,
+            mensaje: inputMensaje.value
+        });
+    });
+
+    socket.on('mensaje_chat', (data) => {
+        const li = `<li><span>${data.nombre}:</span> ${data.mensaje}</li>`;
+        mensajes.innerHTML = mensajes.innerHTML + li;
+    });
+
+    socket.on('users_chat', (data) => {
+        users.innerText = `Usuarios conectados: ${data}`;
+    });
+
+</script>

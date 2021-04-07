@@ -1,0 +1,16 @@
+{
+  "name": "pruebas",
+  "version": "1.0.0",
+  "description": "Proyecto chachi del paraguay",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Mario Girón",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.0",
+    "spanishcities": "^1.5.1"
+  }
+}

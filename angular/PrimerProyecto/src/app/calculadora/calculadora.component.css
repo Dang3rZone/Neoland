@@ -1,0 +1,44 @@
+.calculadora {
+    background-color: lightgrey;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.panel {
+    width: 100%;
+    background-color: white;
+    height: 20px;
+}
+
+.botones button {
+    border-radius: 0;
+    height: 30px;
+}
+
+.botones.numeros {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botones.numeros button {
+    width: 33.33%;
+}
+
+.botones.numeros button:last-child {
+    width: 100%;
+}
+
+.botones.calculos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botones.calculos button {
+    width: 25%;
+}
+
+.botones.calculos button:last-child {
+    width: 100%;
+}

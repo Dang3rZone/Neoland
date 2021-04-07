@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 4</title>
+</head>
+
+<body>
+
+    <ul class="menu"></ul>
+
+    <ul></ul>
+
+
+    <script>
+
+        const secciones = new Array('Home', 'Services', 'Contact');
+
+        //quiero introducir el array en menu
+
+        let menu = document.getElementsByClassName('menu');
+        //array de un solo elemento
+        console.log(menu);
+
+        for (let seccion of secciones) {
+            menu[0].innerHTML += `<li>${seccion}</li>`
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

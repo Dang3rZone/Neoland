@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Elementos</title>
+</head>
+
+<body>
+
+    <ul id="listaCompra">
+        <!-- <li>Pasta</li> -->
+    </ul>
+
+
+    <script>
+        let sectionListaCompra = document.querySelector('#listaCompra');
+        const shoppingList = new Array('Pasta', 'Leche', 'Pan', 'Lentejas', 'Chorizo');
+
+        const nameList = new Array('Juan', 'Alvaro', 'Elena', 'Beatriz', 'Cristian');
+
+        function printList(pAnyList) {
+            pAnyList.forEach((element, index) => {
+                //crear los elementos dinamicamente
+                let li = document.createElement('li'); //<li></li>
+                let contentLi = document.createTextNode(element) //Pasta
+                li.className = "item";
+
+                let mybackgroundColor = (index % 2 != 0) ? 'black' : 'tomato';
+                let fontColor = (index % 2 != 0) ? 'white' : 'black';
+
+                li.style.backgroundColor = mybackgroundColor
+                li.style.color = fontColor;
+
+                //meto el texto dentro de la etiqueta
+                li.appendChild(contentLi); //<li>Pasta</li>
+
+                //meter el li en la seccion correspondiente
+                sectionListaCompra.appendChild(li); //<ul><li>Pasta</li></ul>
+            });
+        }
+
+        printList(shoppingList)
+
+
+
+    </script>
+
+</body>
+
+</html>

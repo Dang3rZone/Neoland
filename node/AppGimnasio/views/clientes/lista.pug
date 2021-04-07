@@ -1,0 +1,31 @@
+extends ../layout.pug
+
+block content
+    h1 Listado de clientes
+
+    table.table
+        thead
+            tr
+                th Nombre
+                th Apellidos 
+                th Dirección 
+                th Edad 
+                th Email 
+                th Sexo 
+                th Cuota
+                th DNI 
+                th Acciones
+        tbody 
+            each cliente in arrClientes
+                tr
+                    td= cliente.nombre
+                    td= cliente.apellidos
+                    td= cliente.direccion
+                    td= cliente.edad
+                    td= cliente.email
+                    td= cliente.sexo
+                    td= cliente.cuota
+                    td= cliente.dni
+                    td
+                        a.btn.btn-sm.btn-info(href="/clientes/edit/"+cliente.id) Editar
+                        a.btn.btn-sm.btn-danger.ml-2(href="/clientes/delete/"+cliente.id, onclick="return confirm('¿Estás seguro?')") Eliminar

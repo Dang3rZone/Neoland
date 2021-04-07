@@ -1,0 +1,9 @@
+<div class="productos">
+    <div class="producto" *ngFor="let producto of listaProductos">
+        <h3 [routerLink]="['/shop', producto.id]" class="name">{{ producto.name }}</h3>
+        <img [src]="producto.image" alt="">
+        <p class="price">{{ producto.price }}€</p>
+        <p>Cantidad: {{ producto.count }}</p>
+        <button (click)="onClick(producto)">Eliminar</button>
+    </div>
+</div>

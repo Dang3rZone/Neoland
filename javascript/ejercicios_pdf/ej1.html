@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section>
+        <h2>Lista de multiplos</h2>
+        <ul id="listadoNumeros">
+        </ul>
+    </section>
+    <section>
+        <h2>Suma de multiplos</h2>
+        <div id="sumatorio"></div>
+    </section>
+    <script>
+
+        let numero = parseFloat(prompt('Dame un numero'));
+        let seccionNumeros = document.querySelector('#listadoNumeros');
+        let sumatorio = document.querySelector('#sumatorio');
+
+        const numeros = new Array();
+
+        for (let i = 1; i <= 10; i++) {
+            numeros.push(i * numero);
+            seccionNumeros.innerHTML += `<li>${i * numero}</li>`
+        }
+
+        let suma = 0;
+
+        const sumar = function (pListaNumeros) {
+            pListaNumeros.forEach(numero => suma += numero);
+            sumatorio.innerText = suma;
+        }
+
+        sumar(numeros)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

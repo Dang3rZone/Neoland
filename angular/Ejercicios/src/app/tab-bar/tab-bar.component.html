@@ -1,0 +1,28 @@
+<div class="botones">
+    <button [ngClass]="{ activo: (tabSeleccionada === 'stats') }" (click)="onClick('stats')">
+        Stats
+    </button>
+    <button [ngClass]="{ activo: (tabSeleccionada === 'calendar') }" (click)="onClick('calendar')">
+        Calendar
+    </button>
+    <button [ngClass]="{ activo: (tabSeleccionada === 'support') }" (click)="onClick('support')">
+        Support
+    </button>
+    <button [ngClass]="{ activo: (tabSeleccionada === 'social') }" (click)="onClick('social')">
+        Social
+    </button>
+    <button [ngClass]="{ activo: (tabSeleccionada === 'documentation') }" (click)="onClick('documentation')">
+        Documentation
+    </button>
+</div>
+
+<p *ngIf="tabSeleccionada === 'stats'">Párrafo de Stats</p>
+<p *ngIf="tabSeleccionada === 'calendar'">Párrafo de Calendar</p>
+
+<div [ngSwitch]="tabSeleccionada">
+    <p *ngSwitchCase="'stats'">Párrafo de Stats</p>
+    <p *ngSwitchCase="'calendar'">Este es el calendario</p>
+    <p *ngSwitchCase="'support'">Página de Support</p>
+    <p *ngSwitchCase="'social'">Redes sociales</p>
+    <p *ngSwitchCase="'documentation'">La Documentación</p>
+</div>

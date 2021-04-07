@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+
+    <script>
+
+        //filter es un metodo que me permite buscar mas de un elemento que cumpla determinada condicion. Devuelve un array de uno o varios elementos segun cumplan la condicion.
+
+        const listaAlumnos = [
+            {
+                nombre: 'Juan',
+                edad: 38
+            },
+            {
+                nombre: 'Lucia',
+                edad: 48
+            },
+            {
+                nombre: 'Pepe',
+                edad: 65
+            },
+        ]
+
+        // find -> devuelve un objeto el primero que se encuentra
+
+        // filter -> devuelve un array con los elemento que cumple la condion
+
+
+        //dame todos los alumnos menores de 50 años
+        let listaFiltrada = listaAlumnos.filter(function (alumno) {
+            return alumno.edad < 40
+        });
+
+        console.log(listaFiltrada);
+
+
+
+    </script>
+
+</body>
+
+</html>

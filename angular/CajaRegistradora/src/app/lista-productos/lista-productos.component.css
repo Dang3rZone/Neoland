@@ -1,0 +1,35 @@
+.lista {
+    border: 1px solid black;
+}
+
+.lista .titulo {
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: lightcyan;
+    border-bottom: 1px solid gray;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.producto {
+    border: 1px solid gray;
+    width: 17%;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+.producto p {
+    margin: 0;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.producto img {
+    width: 100%;
+}

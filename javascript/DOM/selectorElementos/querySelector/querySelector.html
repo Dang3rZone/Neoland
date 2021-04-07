@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li><a href="">Home</a></li>
+    </ul>
+
+    <div class="menu"></div>
+
+    <div id="cuadrado"></div>
+
+
+    <script>
+
+        //querySelector me permite seleccionar el primer elemento que cumpla la condicion css entre parentesis.
+
+        let menu = document.querySelector('.menu'); //me devuelve un objeto
+
+        console.log(menu);
+
+
+        let cuadrado = document.querySelector('#cuadrado');
+
+        console.log(cuadrado);
+
+        cuadrado.innerText = 'Juan';
+        
+        //ventajas de querySelector respecto a metodos get
+
+            // 1 - es un metodo mas moderno, salio en las ES6
+            // 2 - me permite usar herencia y reglas css
+            // 3 - me permite obtener un objeto de forma directa sin tener que recurrir a un array (si no lo quiero);
+
+
+    </script>
+
+</body>
+
+</html>

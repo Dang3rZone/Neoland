@@ -1,0 +1,21 @@
+extends ../layout.pug
+
+block content 
+    h1 Edita un producto 
+    form(action="/productos/update", method="POST")
+        .form-group
+            label Nombre
+            input.form-control(type="text", name="nombre", value=producto.nombre)
+        .form-group
+            label Precio
+            input.form-control(type="number", name="precio", value=producto.precio)
+        .form-group
+            label Departamento
+            input.form-control(type="text", name="departamento", value=producto.departamento)
+        .form-group
+            label Imagen
+            input.form-control(type="text", name="imagen", value=producto.imagen)
+        input(type="hidden", name="id", value=producto._id)
+        input.btn.btn-block.btn-info(type="submit", value="Enviar")
+    
+    

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de promesas</title>
+</head>
+
+<body>
+
+
+    <script>
+        //declaracion de la promesa
+        const miPromesa = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                let notasAleatorias = Math.random() * 11;
+
+                if (notasAleatorias < 5) {
+                    resolve('Estas suspendido ' + notasAleatorias);
+                } else if (notasAleatorias >= 5 && notasAleatorias <= 10) {
+                    resolve('Aprobado' + notasAleatorias);
+                } else {
+                    reject('La nota no esta dentro del rango pedido');
+                }
+            }, 3000)
+
+        })
+
+
+        //consumición de la promesa
+
+        miPromesa
+            .then((pMensaje) => {
+                console.log(pMensaje);
+            })
+            .catch((pError) => {
+                console.log(pError);
+            })
+
+        console.log('Estoy cargando la cabecera')
+        console.log('Estoy cargando la pie');
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

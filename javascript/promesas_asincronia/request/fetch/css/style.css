@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main #content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main #content article {
+    width: calc(33.333% - 20px);
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}

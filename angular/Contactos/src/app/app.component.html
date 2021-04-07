@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="left">
+    <app-formulario (creaContacto)="onCreaContacto($event)"></app-formulario>
+  </div>
+  <div class="right">
+    <app-lista [contactos]="arrContactos"></app-lista>
+  </div>
+</div>
+
+<!-- <app-lista
+  [contactos]="[{nombre: 'Pepito', direccion: 'gran via', email: 'pepito@gmail.com', telefono: '99199212'}, {nombre: 'Rosarito', direccion: 'gran via', email: 'pepito@gmail.com', telefono: '99199212'}]">
+</app-lista> -->

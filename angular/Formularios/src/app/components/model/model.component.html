@@ -1,0 +1,96 @@
+<!-- formulario.get('email').hasError('pattern') && formulario.get('email').touched
+formulario.get('nombre').hasError('required') && formulario.get('nombre').touched
+formulario.get('apellidos').hasError('required') && formulario.get('apellidos').touched
+formulario.get('apellidos').hasError('minlength') && formulario.get('apellidos').touched -->
+
+<div>
+    <p>Errores Nombre: {{ formulario.get('nombre').errors | json }}</p>
+    <p>{{ formulario.get('apellidos').errors | json }}</p>
+</div>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre">
+        <p class="error" *ngIf="formulario.get('nombre').hasError('required') && formulario.get('nombre').touched">
+            El campo nombre es requerido
+        </p>
+    </div>
+
+
+
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" class="form-control" formControlName="apellidos">
+        <p class="error" *ngIf="checkValidator('apellidos', 'required')">
+            El campo apellidos es requerido
+        </p>
+        <p class="error"
+            *ngIf="formulario.get('apellidos').hasError('minlength') && formulario.get('apellidos').touched">
+            El tamaño mínimo de los apellidos debe ser de 4 caracteres
+        </p>
+        <p class="error" *ngIf="checkValidator('apellidos', 'maxlength')">
+            El tamaño máximo de los apellidos es de 4 caracteres
+        </p>
+    </div>
+
+
+
+
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="number" class="form-control" formControlName="edad">
+        <p class="error" *ngIf="checkValidator('edad', 'edadvalidator')">
+            La edad debe estar entre {{ formulario.get('edad').errors.edadvalidator.edadMin }} y {{
+            formulario.get('edad').errors.edadvalidator.edadMax }}
+        </p>
+    </div>
+
+
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" formControlName="email">
+        <p class="error" *ngIf="checkValidator('email', 'pattern')">
+            El formato del email debe ser correcto
+        </p>
+    </div>
+
+
+
+
+    <div class="form-group">
+        <label>DNI</label>
+        <input type="text" class="form-control" formControlName="dni">
+        <p class="error" *ngIf="checkValidator('dni', 'dnivalidator')">
+            El formato del DNI es incorrecto
+        </p>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password">
+        <p class="error" *ngIf="checkValidator('password', 'pattern')">
+            El formato de la password es incorrecto
+        </p>
+    </div>
+
+    <div class="form-group">
+        <label>Password Repeat</label>
+        <input type="password" class="form-control" formControlName="password_repeat">
+        <p class="error" *ngIf="formulario.hasError('passwordvalidator')">
+            Los campos de contraseña deben coincidir
+        </p>
+    </div>
+
+
+    <input type="submit" value="Enviar" [disabled]="!formulario.valid" class="btn btn-block btn-primary">
+</form>
+
+<div>
+    <p>Formulario Valid: {{ formulario.valid }}</p>
+    <p>Campo Nombre Valid: {{ formulario.get('nombre').valid }}</p>
+    <p>Campo Nombre InValid: {{ formulario.get('nombre').invalid }}</p>
+    <p>Campo Apellidos Pristine: {{ formulario.get('apellidos').pristine }}</p>
+    <p>Campo Apellidos Dirty: {{ formulario.get('apellidos').dirty }}</p>
+</div>

@@ -1,0 +1,76 @@
+body{
+    @if $style == dark
+    {
+         background-color: $darkColor;
+    }@else{
+         background-color: $primaryColor;
+    }
+   
+}
+
+header{
+    @if $style == dark
+    {
+         background-color: $headerDarkColor;
+    }@else{
+        background-color: $headerColor;
+    }
+    padding: 10px;
+    .logo{
+        color: white;
+        font-weight: bold; 
+    }
+    nav ul{
+        list-style: none;
+        li{
+            display: inline-block;
+            a{
+                display: block;
+                padding: 10px;
+                color: white;
+                text-decoration: none;
+                font: {
+                    family: Arial, sans-serif;
+                    size: $fontSize * $multiplicador;
+                    weight: bold;
+                };
+                &:hover{
+                    color: yellow;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 6{
+    h#{$i}{
+        font-size: $fontSize * ($multiplicador / $i);
+    }
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn_#{$style}{
+    @if $style == dark{
+        background-color: black;
+        color: white;
+    }@else{
+        background-color: white;
+        color: black;
+    }
+}
+
+article{
+  @include bordecitoJuanan(black, 10px, solid);
+  margin: 10px;
+}
+
+figure img{
+     @include bordecitoJuanan(white, 4px, dotted, 20px);
+}

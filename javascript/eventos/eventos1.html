@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 1 </title>
+</head>
+
+<body>
+
+    <ul>
+        <li onclick="cambiarColor('blue')">Azul</li>
+        <li onclick="cambiarColor('green')">Verde</li>
+        <li onclick="cambiarColor('red')">Rojo</li>
+        <li onclick="cambiarColor('yellow')">Amarillo</li>
+    </ul>
+
+    <script>
+        //cuando hagamos click sobre el boton el fondo cambiara.
+        function cambiarColor(pColor) {
+            document.body.style.backgroundColor = pColor;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

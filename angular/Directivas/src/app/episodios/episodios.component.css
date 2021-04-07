@@ -1,0 +1,25 @@
+.table {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.episodios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.episodio {
+    width: 150px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.fila-par {
+    background-color: teal;
+}
+
+.fila-impar {
+    background-color: coral;
+}

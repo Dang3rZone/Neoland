@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .baja {
+            background-color: lightgreen;
+        }
+
+        .media {
+            background-color: lightyellow;
+        }
+
+        .alta {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="formulario">
+            <input type="text" name="" id="inputTarea">
+            <select name="" id="prioridad">
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+            </select>
+            <button id="btnGuardar">Guardar</button>
+        </div>
+        <div class="listaTareas"></div>
+    </div>
+    <script src="./datos.js"></script>
+    <script src="./funciones.js"></script>
+    <script src="./eventos.js"></script>
+</body>
+
+</html>

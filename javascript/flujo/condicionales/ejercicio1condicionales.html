@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+
+<body>
+
+
+    <script>
+        //portero de discoteca
+
+        //teneis que preguntar la edad por pantalla y si es mayor de edad dejarle entrar y si no impedirle el paso.
+
+        const EDAD_CORTE = 18;
+        const edad = parseInt(prompt('Dime tu edad'));
+
+        if (edad >= 0 && edad < EDAD_CORTE) {
+            document.write('<h2>Un vasito de leche y la cama</h2>');
+        } else if (edad < 0) {
+            alert('edad no valida');
+        } else {
+            document.write('<h2>Bienvenido</h2>');
+        }
+
+
+    </script>
+</body>
+
+</html>

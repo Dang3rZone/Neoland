@@ -1,0 +1,11 @@
+<div class="container">
+  <button class="btn btn-warning" (click)="onClick()">ELIMINAR TODAS LAS TAREAS</button>
+  <div class="row">
+    <div class="col-md-5 col-12">
+      <app-formulario (tareaCreada)="onTareaCreada($event)"></app-formulario>
+    </div>
+    <div class="col-md-7 col-12">
+      <app-lista [tareas]="arrTareas"></app-lista>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<select (change)="onChange($event)">
+    <option value="todos">Todos 🌍</option>
+    <option [value]="pais" *ngFor="let pais of listaPaises">
+        {{ pais }}
+    </option>
+</select>
+<div class="escritores">
+    <div class="escritor" *ngFor="let escritor of listaEscritores"
+        [ngStyle]="{backgroundImage: 'url('+escritor.imagen+')'}" [routerLink]="['/escritores', escritor.id]">
+        <h4>{{escritor.nombre}} {{escritor.apellidos}}</h4>
+        <!-- <img [src]="escritor.imagen" alt=""> -->
+        <p>{{escritor.pais}}</p>
+    </div>
+</div>
+<!-- 
+    Definir un select con los países dentro del HTML
+    Capturar el evento CHANGE del select
+    En función del valor del SELECT hascer una llamada al servicio para recuperar los escritores por país
+    Mostrar los escritores en el HTML 
+ -->
+
+<!-- 
+     Recuperar la parte dinámica de la URL para conocer el ID del escritor
+     -> ActivatedRoute
+
+     Recuperar un escritor a través de su ID
+     -> Servicio
+
+     Mostrar el Escritor
+  -->

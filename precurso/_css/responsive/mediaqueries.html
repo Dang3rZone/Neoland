@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakpoints o puntos de corte donde mi css cambia</title>
+
+    <style>
+        .caja {
+            width: 100%;
+            background-color: tomato;
+            margin: 0 auto;
+            text-align: left;
+            /* no se justifican texto */
+        }
+
+        .caja h2 {
+            display: none;
+        }
+
+        @media (min-width: 426px) {
+            .caja {
+                width: 80%;
+                background-color: green;
+            }
+
+            .caja h2 {
+                display: block;
+            }
+
+        }
+
+        @media(min-width: 800px) {
+            .caja {
+                background-color: blue;
+                border: 2px solid red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        los mas comunes son cuatro. 
+        movil: 0px a 425px
+        tablet: 426px - 768px- 800px
+        portatil: 800px a 1200px
+        monitor: 1200px -- 2k - 4k 
+    -->
+
+    <div class="caja">
+        <h2>Titulo de caja</h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem explicabo et voluptas, temporibus
+        beatae adipisci, facilis fuga ab quis unde error consequatur distinctio eveniet quam rerum ullam nostrum veniam
+        officia.
+    </div>
+
+
+</body>
+
+</html>

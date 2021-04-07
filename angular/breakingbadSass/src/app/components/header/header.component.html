@@ -1,0 +1,16 @@
+<header>
+  <div class="logo">
+    <a [routerLink]="['/home']">Br<sup>35</sup>Ba<sup>56</sup></a>
+  </div>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/characters']">Personajes</a></li>
+      <li><a [routerLink]="['/episodes']">Episodios</a></li>
+      <li>
+        <input [(ngModel)]="search" type="text" placeholder="Buscar por nombre">
+        <button (click)="searchValue()">BUSCAR</button>
+      </li>
+    </ul>
+  </nav>
+
+</header>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array mutidimensional JSON</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                apellido: 'Perez',
+                edad: 38,
+                notamedia: 10
+            },
+            {
+                nombre: 'David',
+                apellido: 'Benito',
+                edad: 21,
+                notamedia: 7
+            },
+            {
+                nombre: 'Beatriz',
+                apellido: 'Campos',
+                edad: 28,
+                notamedia: 8
+            },
+            {
+                nombre: 'Alvaro',
+                apellido: 'Gonzalez',
+                edad: 21,
+                notamedia: 4
+            },
+            {
+                nombre: 'Wilmer',
+                apellido: 'Quispe',
+                edad: 30,
+                notamedia: 3
+            }
+        )
+
+        //quiero que me saqueis por pantalla todos los alumnos suspensos.
+
+        const NOTA_CORTE = 5;
+
+        //me gustaria que esta funcion, depdendiendo de un parametro pudiese pintar los aprobados o los suspensos
+        function filtrarAlumnosNota(pListaCualquiera, pNotaMinima, pNotaMaxima) {
+            for (let alumno of pListaCualquiera) {
+                if (alumno.notamedia >= pNotaMinima && alumno.notamedia < pNotaMaxima) {
+                    let div = `<article>
+                            <h2>${alumno.nombre} ${alumno.apellido}</h2>
+                            <ul>
+                                <li>EDAD: ${alumno.edad}</li>
+                                <li>NOTA: ${alumno.notamedia}</li>
+                            </ul>
+                        </article>`;
+                    document.write(div);
+                }
+            }
+        }
+
+
+
+
+        const miPequenaListaAlumnos = new Array(
+            {
+                nombre: 'Pepe',
+                apellido: 'Villuela',
+                edad: 38,
+                notamedia: 4
+            },
+            {
+                nombre: 'Javier',
+                apellido: 'Cardenas',
+                edad: 21,
+                notamedia: 7
+            }
+        )
+
+        filtrarAlumnosNota(listaAlumnos, 6, 9);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

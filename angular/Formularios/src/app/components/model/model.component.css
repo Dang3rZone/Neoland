@@ -1,0 +1,14 @@
+input.ng-valid.ng-dirty {
+    border-color: lightgreen;
+}
+
+input.ng-invalid.ng-dirty {
+    border-color: tomato;
+}
+
+/* [type="email"].ng-invalid.ng-touched {}  */
+
+.error {
+    font-size: 12px;
+    color: tomato;
+}

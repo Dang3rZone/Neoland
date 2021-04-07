@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - objeto complejo</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const alumno = {
+            nombre: 'Juan',
+            apellido: 'Perez',
+            edad: 38,
+            genero: 'masculino',
+            matricula: 'A123456',
+            estado: true,
+            notas: [3, 10, 4.5, 5],
+            profesores: {
+                matematicas: {
+                    profesor: 'Don Pepe',
+                    nota: 5
+                },
+                lengua: {
+                    profesor: 'Don Rosa',
+                    nota: 4
+                },
+                ingles: {
+                    profesor: 'Mrs Halmiton',
+                    nota: 7
+                },
+                fisica: {
+                    profesor: 'Don Pepito',
+                    nota: 10
+                },
+            },
+            mostrarNotaMedia: function () {
+                let suma = 0;
+                //this.notas this se refiere al objeto en el que me encuentro.
+
+                for (let nota of this.notas) {
+                    suma += nota
+                }
+
+                return suma / this.notas.length;
+            },
+            cambiarEdad: function (pEdad) {
+                this.edad = pEdad;
+            }
+        }
+
+        console.log(alumno.nombre); //Juan
+
+        console.log(alumno['matricula']); //'A123456'
+
+        //quiero una segunda nota del alumno
+
+        console.log(alumno.notas[1]); // 10
+
+        //profesor de fisica
+        console.log(alumno.profesores.fisica); //Don Pepito
+        console.log(alumno['profesores']['fisica']); //Don Pepito
+
+        //listado completo de profesores.
+
+        for (let key in alumno.profesores) {
+            if (alumno.profesores[key].nota > 5) {
+                console.log(alumno.profesores[key].nota);
+            }
+        }
+
+
+        //Sacar la nota media
+        let media = alumno.mostrarNotaMedia()
+
+        console.log(media);
+
+
+        //puedo agregar elementos nuevos al objeto.
+        // alumno = 'pepe'; 
+        alumno.direccion = "Plaza de españa 19";
+
+        console.log(alumno);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

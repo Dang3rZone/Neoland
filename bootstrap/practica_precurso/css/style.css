@@ -1,0 +1,47 @@
+.bg-dark {
+    background-color: black !important;
+}
+
+.hero {
+    background-image: url('../images/bosque.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-position: top center;
+    background-color: #666;
+    background-blend-mode: multiply;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 400%;
+    font-weight: normal;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.hr {
+    width: 10%;
+}
+
+.card {
+    border: 0;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card {
+    border: 0;
+}
+
+.card .rounded-circle {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}

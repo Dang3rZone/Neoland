@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexOf - findIndex</title>
+</head>
+
+<body>
+
+    <script>
+        //indexof solo vale para array simples
+        //busca un elemento dentro del array y si lo encontra te devuelve su posicion si no o encuentre te devuelve -1.
+
+        const listaAnimales = new Array('León', 'Gato', 'Periquito');
+
+        let animalBuscar = 'gato';
+
+        let posicion = listaAnimales.indexOf(animalBuscar);
+        console.log(posicion);
+
+
+        //si no puede accer a cambiar temporalmente los datos de la lista. Recorro la lista y comparo una a uno.
+        let contador = 0;
+        let miPosicion = 0;
+
+        for (let animal of listaAnimales) {
+            if (animal.toLowerCase() == animalBuscar.toLowerCase()) {
+                miPosicion = contador;
+            }
+            contador++;
+        }
+
+        console.log(miPosicion);
+
+        //findIndex sirve para array multidimensionales. y funcion exactamente igual.
+
+        const listaAlumnos = [
+            {
+                nombre: 'Juan',
+                edad: 38
+            },
+            {
+                nombre: 'Lucia',
+                edad: 48
+            },
+            {
+                nombre: 'Pepe',
+                edad: 65
+            },
+        ]
+
+        let nombre = 'Pepe';
+
+        //que tiene un callback que realiza la comparacion. 
+
+        let posicionBuscada = listaAlumnos.findIndex(alumno => alumno.nombre === nombre);
+
+        // 5 == "5" true
+        // 5 === "5" false
+
+        console.log(posicionBuscada);
+
+
+    </script>
+
+</body>
+
+</html>

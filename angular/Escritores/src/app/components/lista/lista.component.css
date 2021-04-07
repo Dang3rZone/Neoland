@@ -1,0 +1,28 @@
+.escritores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.escritor {
+    width: 200px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 5px;
+    text-transform: uppercase;
+    height: 300px;
+    background-size: cover;
+    color: white;
+}
+
+.escritor img {
+    width: 100%;
+}
+
+.escritor h4 {
+    text-align: center;
+}
+
+.escritor p {
+    text-align: right;
+}

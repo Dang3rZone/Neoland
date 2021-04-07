@@ -1,0 +1,12 @@
+.personas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.persona {
+    width: 200px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 5px;
+}

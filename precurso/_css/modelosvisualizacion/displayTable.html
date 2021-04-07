@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display table - para tablas</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .tabla {
+            display: table;
+            width: 100%;
+        }
+
+        .tabla>div {
+            display: table-row;
+        }
+
+        .tabla>div>div {
+            display: table-cell;
+            padding: 10px;
+            background-color: tomato;
+            border: 2px solid white;
+        }
+
+        .productos article {
+            display: table-cell;
+            height: 150px;
+            width: 33.333%;
+            padding: 20px;
+            background-color: darkcyan;
+            border: 10px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tabla">
+        <div>
+            <div>Nombre</div>
+            <div>Apellido</div>
+            <div>Edad</div>
+        </div>
+        <div>
+            <div>Juan Antonio</div>
+            <div>Perez</div>
+            <div>38</div>
+        </div>
+        <div>
+            <div>Pepe</div>
+            <div>Villuela</div>
+            <div>65</div>
+        </div>
+    </div>
+
+    <section class="productos">
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laudantium.</article>
+        <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, molestiae.</article>
+        <article>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, quos?</article>
+    </section>
+
+</body>
+
+</html>

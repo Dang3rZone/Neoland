@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos</title>
+</head>
+
+<body>
+
+    <script>
+        //tipos de datos
+
+        //javascript tiene dos tipos de variables (var , let);
+
+        //undefined creo una variable vacia inicialmente.
+        var nombreAlumno;
+
+        //funcion depuración
+        console.log(nombreAlumno); //undefined
+        nombreAlumno = "Javier";
+        console.log(nombreAlumno); //javier
+
+
+        //string o cadena de caracteres
+
+        var apellido = "Perez";
+        var animal = 'León';
+        var enlace = '<a href="http://google.es">Enlace</a>';
+        console.log(typeof (apellido)); //string
+        console.log(animal);
+
+        //number
+
+        var numero = 1; //Entero
+        var numeroA = 3.45 //racional
+        var numeroC = -34 //negativo
+
+        //debilmente tipado
+
+        var edad = 38;
+        console.log(typeof (edad)); //number
+        edad = "Pepe";
+        console.log(typeof (edad)); //string
+
+
+        //quiero vaciar una variable
+        //vaciado de dato
+        var precio = 38;
+        precio = 0;
+        console.log(typeof (precio));
+        var titulo = "Erase un vez";
+        titulo = "";
+        console.log(typeof (titulo));
+
+
+        //booleanos
+
+        var estado = true;
+        var otroEstado = false;
+
+
+        //CONSTANTES - no se pueden sobreescribir.
+
+        const GRAVEDAD = 9.8;
+        const pi = 3.14;
+        // pi = 34; error
+
+
+        //operador de concatenacion
+
+        var nombre = "Juan";
+        var apellido = "Perez";
+
+        var nombreCompleto = nombre + " " + apellido;
+        console.log(nombreCompleto);
+
+        var numeroE = 34;
+        var numeroS = 2;
+
+        var resultado = numeroE + numeroS;  //36
+
+        console.log(resultado);
+
+        var cadenaE = "34";
+        var cadenaS = "2";
+
+        var resultado2 = cadenaE + cadenaS; //342
+
+        console.log(resultado2);
+
+
+        var numeroA, numeroB;
+        numeroA = 4;
+        numeroB = 0;
+
+        //var [numeroA, numeroB] = (2, 5);
+
+
+    </script>
+</body>
+
+</html>

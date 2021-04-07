@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito Let, var , const</title>
+</head>
+
+<body>
+
+    <script>
+
+        //let y const tienen el mismo ambito (variable y constante)
+
+        //let es global siempre y cuando se cree fuera de cualquier estructura de codigo
+
+        var ciudad = 'Madrid' //global
+        let nombre = 'Pepe' //global
+        const PI = 3.141516 //global
+
+        if (nombre == "Pepe") {
+            var edad = 23 //global
+            let apellido;
+            apellido =  'Perez' //local
+            const gravedad = 9.8 //local
+        }
+
+        console.log(edad); //23
+        console.log(apellido); //no por que es local
+
+
+        for (var i = 1; i < 10; i++) {
+            'i es de ambito global'
+        }
+
+        for (let i = 1; i < 10; i++) {
+            'i es de ambito local'
+        }
+
+        for (let i = 1; i < 10; i++) {
+            'i es de ambito local'
+        }
+
+        for (let i = 1; i < 10; i++) {
+            'i es de ambito local'
+        }
+
+
+    </script>
+
+</body>
+
+</html>

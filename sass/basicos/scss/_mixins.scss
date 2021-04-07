@@ -1,0 +1,10 @@
+/* funciones - mixins -  */
+
+@mixin bordecitoJuanan($color, $width, $style, $padding: 10px){
+    border: {
+        color: $color;
+        width: $width;
+        style: $style;
+    }
+    padding: $padding;
+}

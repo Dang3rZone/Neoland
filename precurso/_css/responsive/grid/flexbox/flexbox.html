@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        section>div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section article {
+            width: 100%;
+            background-color: tomato;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        @media(min-width: 426px) {
+
+            section article {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media(min-width: 800px) {
+
+            section article {
+                width: calc(25% - 20px);
+            }
+
+            section article:nth-child(3n-1) {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media(min-width: 1200px) {
+
+            section article {
+                width: calc(25% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h2>Titulo de la seccion</h2>
+        <div>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+            <article>
+                <h3>Titulo del articulo 1</h3>
+            </article>
+        </div>
+    </section>
+
+</body>
+
+</html>

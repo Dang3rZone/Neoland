@@ -1,0 +1,16 @@
+<section class="character">
+  <h2> {{ character?.name}}</h2>
+  <figure>
+    <img [src]="character?.img" [alt]="character?.nickname">
+  </figure>
+  <ul>
+    <li>Cumpleaños: {{ character?.birthday}}</li>
+    <li>Estado: {{ character?.status}}</li>
+    <li>Actor: {{ character?.portrayed}}</li>
+    <li> Trabajos
+      <ul>
+        <li *ngFor="let jobs of character?.occupation">{{jobs}}</li>
+      </ul>
+    </li>
+  </ul>
+</section>

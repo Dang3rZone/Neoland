@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //es un metodo de busqueda o filtrado para arrays, se utiliza principalmente en array multidimensionales de json. Recibe un parametro que es un funcion de callback que estable la condicion a cumplir. ME DEVUELVE EL PRIMER OBJETO O VALOR QUE CUMPLA LA CONDICION
+
+        const listaAlumnos = [
+            {
+                nombre: 'Juan',
+                edad: 38
+            },
+            {
+                nombre: 'Lucia',
+                edad: 48
+            },
+            {
+                nombre: 'Pepe',
+                edad: 65
+            },
+        ]
+
+        //dime el primer alumnos que sea menor de 50
+        let edadMaxima = 80;
+        let edadMinima = 40
+
+        const alumno = listaAlumnos.find( alumno =>  alumno.edad > edadMinima && alumno.edad < edadMaxima);
+
+        console.log(alumno);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

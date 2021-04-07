@@ -1,0 +1,6 @@
+<div>
+    Mín <input type="text" [(ngModel)]="numMin"> {{ numMin }}
+    Máx <input type="text" [(ngModel)]="numMax"> {{ numMax }}
+    <button (click)="onClick()">RANDOM</button>
+    <p *ngIf="numAleatorio">ALEATORIO: {{ numAleatorio }}</p>
+</div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        //crear una lista de animales con raza y peligrosidad (1-5), quiero 7 animales.
+
+        const animales = new Array(
+            {
+                raza: 'Leon',
+                peligrosidad: 5
+            },
+            {
+                raza: 'Perro',
+                peligrosidad: 2
+            },
+            {
+                raza: 'Colibri',
+                peligrosidad: 1
+            },
+            {
+                raza: 'Hipopotamo',
+                peligrosidad: 5
+            },
+            {
+                raza: 'Cobra',
+                peligrosidad: 3
+            },
+            {
+                raza: 'Ballena',
+                peligrosidad: 4
+            },
+            {
+                raza: 'Aguila',
+                peligrosidad: 3
+            },
+        )
+
+        //pintar la lista completa de animales en listado no numerado
+        //Leon : 5
+        //Perro : 2
+
+        function pintarListaAnimales(pListaAnimales) {
+            let listado = '<ul>';
+            for (let animal of pListaAnimales) {
+                listado += `<li>${animal.raza} : ${animal.peligrosidad}</li>`
+            }
+            listado += '</ul>';
+            document.write(listado);
+        }
+
+        //filtrar animales con peligrosidad 5 - la funcion no puede pintar animales, por que ya tenemos un funcion que pinta animales.
+
+        function filtrarPeligrosidad(pListaAnimales, pPeligrosidad) {
+            //filtrar coge datos los compara y si cumplen la condicion los guarda
+
+            let listaFiltrada = new Array();
+
+            for (let animal of pListaAnimales) {
+                if (animal.peligrosidad == pPeligrosidad) {
+                    let posicion = listaFiltrada.length
+                    listaFiltrada[posicion] = animal;
+                }
+            }
+            return listaFiltrada;
+        }
+
+
+        let listaPeligrosidad = filtrarPeligrosidad(animales, 3);
+
+        pintarListaAnimales(listaPeligrosidad);
+
+        
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data atributes</title>
+    <style>
+        .caja {
+            width: 100px;
+            height: 100px;
+            transition: 0.5s;
+        }
+
+        .roja {
+            background-color: tomato;
+        }
+
+        .verde {
+            background-color: green;
+        }
+
+        .azul {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button>roja</button>
+    <button>verde</button>
+    <button>azul</button>
+    <hr>
+    <div data-velocidad="30" data-rotate="10" class="caja roja"></div>
+    <div data-velocidad="5" class="caja verde"></div>
+    <div data-velocidad="50" data-rotate="10" class="caja azul"></div>
+
+    <script>
+        let buttons = document.querySelectorAll('button');
+        let roja = document.querySelector('.roja');
+        let verde = document.querySelector('.verde');
+        let azul = document.querySelector('.azul');
+        let [avanceRoja, avanceVerde, avanceAzul] = [0, 0, 0];
+        let rotacionRoja = 0;
+        let rotacionAzul = 0;
+
+        buttons.forEach(button => button.addEventListener('click', mover));
+
+        function mover(event) {
+            switch (event.target.innerText) {
+                case 'roja':
+                    moverRoja();
+                    break;
+                case 'verde':
+                    moverVerde();
+                    break;
+                case 'azul':
+                    moverAzul();
+                    break;
+            }
+        }
+
+        function moverRoja() {
+            let velocidad = parseInt(roja.dataset.velocidad);
+            let rotate = parseInt(roja.dataset.rotate);
+
+            rotacionRoja += rotate;
+            avanceRoja += velocidad;
+            roja.style.marginLeft = avanceRoja + 'px';
+            roja.style.transform = `rotateZ(${rotacionRoja}deg)`
+        }
+
+        function moverVerde() {
+            avanceVerde += parseInt(verde.dataset.velocidad);
+            verde.style.marginLeft = avanceVerde + 'px';
+        }
+
+        function moverAzul() {
+            avanceAzul += parseInt(azul.dataset.velocidad);
+
+            let rotate = parseInt(azul.dataset.rotate);
+
+            rotacionAzul -= rotate;
+            azul.style.marginLeft = avanceAzul + 'px';
+            azul.style.transform = `rotateZ(${rotacionAzul}deg)`;
+
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

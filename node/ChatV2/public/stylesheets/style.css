@@ -1,0 +1,53 @@
+h2 {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  background-color: lightgrey;
+  padding: 10px 0;
+}
+
+.main {
+  height: 72vh;
+  /* background-color: lightgoldenrodyellow; */
+  padding: 30px;
+  overflow-y: scroll;
+  border: 3px solid lightgray;
+}
+
+.main i {
+  margin-bottom: 0;
+}
+
+.main hr {
+  margin-top: 0;
+}
+
+.main ul {
+  font-size: 24px;
+  list-style: none;
+}
+
+.main ul span {
+  font-weight: bold;
+}
+
+.actions {
+  height: 15vh;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.actions .username {
+  width: 20%;
+}
+
+.actions .message {
+  width: 60%;
+}
+
+.actions button {
+  height: 80%;
+  width: 100px;
+}

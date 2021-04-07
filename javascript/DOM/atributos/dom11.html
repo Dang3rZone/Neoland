@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 11</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea alias totam quae dolorum fugiat soluta dolor ex
+        delectus deserunt asperiores molestiae minima blanditiis, aperiam, fugit fuga quo odio beatae consectetur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea alias totam quae dolorum fugiat soluta dolor ex
+        delectus deserunt asperiores molestiae minima blanditiis, aperiam, fugit fuga quo odio beatae consectetur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea alias totam quae dolorum fugiat soluta dolor ex
+        delectus deserunt asperiores molestiae minima blanditiis, aperiam, fugit fuga quo odio beatae consectetur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea alias totam quae dolorum fugiat soluta dolor ex
+        delectus deserunt asperiores molestiae minima blanditiis, aperiam, fugit fuga quo odio beatae consectetur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum doloribus ipsum aliquid praesentium vitae
+        voluptatem iste. Veniam inventore expedita et, magni assumenda explicabo facere dolore doloremque quaerat at
+        libero asperiores!</p>
+
+
+    <script>
+
+        //vamos a modificar los estilos de los parrafos de forma dinamica a traves a javascript. Que los parrafos impares tenga fondo negro, color de fuente blanco y un padding de 10px. Los pares solo padding de 10px
+
+
+        let parrafos = document.querySelectorAll('p');
+
+        parrafos.forEach((parrafo, index) => {
+            if (index % 2 != 0) {
+                //impares
+                parrafo.style.backgroundColor = "black";
+                parrafo.style.color = "white";
+                parrafo.style.borderRadius = "20px";
+
+            }
+            parrafo.style.padding = '10px';
+        })
+
+
+
+    </script>
+</body>
+
+</html>

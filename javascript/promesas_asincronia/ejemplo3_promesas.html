@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas Ejemplo dos</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function dimeTuEdad(pEdadMax) {
+            const prom = new Promise((resolve, reject) => {
+
+                let edadAleatoria = Math.random() * 100;
+
+                if (edadAleatoria < 18) {
+                    resolve('Un vasito de leche y la cama');
+                } else if (edadAleatoria >= 18 && edadAleatoria <= pEdadMax) {
+                    resolve('Bienvenido')
+                } else {
+                    reject('No es un parametro deseado');
+                }
+            })
+
+            return prom;
+        }
+
+        function dameTuGenero() {
+            const prom = new Promise((resolve, reject) => {
+                let genero = "Masculino";
+                resolve(genero);
+            })
+
+            return prom;
+        }
+
+
+        dameTuGenero()
+            .then((genero) => {
+
+                if (genero === "Masculino") {
+                    dimeTuEdad(65)
+                        .then((pMensaje) => {
+                            console.log(pMensaje);
+                        })
+                        .catch(pError => {
+                            console.log(pError)
+                        })
+
+                }
+                else if (genero === 'Femenino') {
+                    dimeTuEdad(20)
+                        .then((pMensaje) => {
+                            console.log(pMensaje);
+                        })
+                        .catch(pError => {
+                            console.log(pError)
+                        })
+                }
+
+
+            })
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

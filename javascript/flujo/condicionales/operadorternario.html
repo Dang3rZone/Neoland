@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador ternario</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // const nota = parseInt(prompt('Dame tu nota'));
+        // var mensaje = "";
+
+        /*   if (nota >= 0 && nota < 5) {
+              mensaje = "suspenso";
+          } else {
+              mensaje = "aprobado";
+          } */
+
+
+        //operador ternario
+
+        // const otromensaje = (nota >= 0 && nota < 5) ? 'has suspendido' : 'has aprobado';
+
+        //acceso usuarios
+        const ADMIN = 'juan';
+        const PASS = '12345';
+        const user = prompt('Dame un usuario');
+        const password = prompt('Dame un password');
+
+        const acceso = (user.toLowerCase() == ADMIN && password == PASS) ? 'Bienvenido' : 'usuario no encontrado';
+        //toUpperCase() lo convierte a mayusculas
+
+        document.write(acceso);
+
+        //los lenguajes son son case sensitive, son sensibles a mayusculas y minusculas Juan != juan -> true
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

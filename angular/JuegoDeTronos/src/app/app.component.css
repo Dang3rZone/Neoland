@@ -1,0 +1,24 @@
+.characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.character {
+    width: 150px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 10px;
+}
+
+.character img {
+    width: 100%;
+}
+
+.alive {
+    border-color: lightgreen;
+}
+
+.dead {
+    border-color: salmon;
+}

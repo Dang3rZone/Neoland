@@ -1,0 +1,10 @@
+<div class="clientes">
+    <div class="cliente" *ngFor="let cliente of arrClientes">
+        <h3>{{cliente.nombre}} {{cliente.apellidos}}</h3>
+        <p>Email: {{cliente.email}}</p>
+        <p>Dirección: {{cliente.direccion}}</p>
+        <p>DNI: {{cliente.dni}}</p>
+        <p>Cuota: {{cliente.cuota}}</p>
+        <p>Sexo: {{cliente.sexo}}</p>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<!--
+Enlazar una variable con un campo de texto
+Si modifico el valor de la variable, se modifica el valor del campo de texto
+Si modifico el valor del campo de texto, se modifica la variable
+
+ngModel
+
+-->
+<p>{{ texto }}</p>
+<input type="text" [(ngModel)]="texto" />
+<button (click)="onClick()">Cambio Texto</button>
+
+<!-- NO USAMOS LA ETIQUETA FORM -->
+<div>
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="inputNombre">
+</div>
+<div>
+  <label>Apellidos</label>
+  <input type="text" [(ngModel)]="inputApellidos">
+</div>
+<div>
+  <label>Dirección</label>
+  <input type="text" [(ngModel)]="inputDireccion">
+</div>
+<div>
+  <label>Email</label>
+  <input type="text" [(ngModel)]="inputEmail">
+</div>
+<button (click)="onClickFormulario()">Enviar</button>
+
+<hr>
+
+<div>
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="persona.nombre">
+</div>
+<div>
+  <label>Apellidos</label>
+  <input type="text" [(ngModel)]="persona.apellidos">
+</div>
+<div>
+  <label>Dirección</label>
+  <input type="text" [(ngModel)]="persona.direccion">
+</div>
+<div>
+  <label>Email</label>
+  <input type="text" [(ngModel)]="persona.email">
+</div>
+<button (click)="onClickFormularioObj()">Enviar</button>
+
+{{ persona | json }}

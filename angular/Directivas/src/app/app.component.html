@@ -1,0 +1,24 @@
+<p subrayado>Va usté muy cargadoo al ataquerl diodeno no puedor a wan no te digo trigo</p>
+<p>Va usté muy cargadoo al ataquerl diodeno no puedor a wan no te digo trigo</p>
+
+<button (click)="onClick()">Cambia Color</button>
+
+<input type="text" (input)="onInput($event)" />
+
+<input type="range" min="10" max="100" step="1" (input)="onInputRange($event)" />
+
+<p [ngStyle]="propiedadesParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eum!</p>
+
+<p [ngClass]="{ subrayado: isSubrayado }">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nemo.</p>
+
+<button (click)="onClickSubrayado()">ON / OFF</button> -->
+<!-- Cuando pulse el botón, si está subrayado, que se quite, si no lo está, que se ponga, y así todo el rato que nos queda de mañana -->
+
+<app-semaforo></app-semaforo>
+
+<p *ngIf="mostrar">Párrafo TRUE</p>
+<p *ngIf="!mostrar">Párrafo FALSE</p>
+
+<app-episodios></app-episodios>
+
+<app-switch></app-switch>

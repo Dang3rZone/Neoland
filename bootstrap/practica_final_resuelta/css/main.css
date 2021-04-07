@@ -1,0 +1,138 @@
+.bg-dark {
+    background-color: #000 !important;
+}
+
+.bg-light {
+    background-color: #eee !important;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.jumbotron {
+	padding: 0px;
+    margin-bottom: 2rem;
+    background-image: url(../images/bosque.jpg);
+    height: 850px;
+    background-size: cover;
+	color: white;
+	text-align: center;
+}
+
+.jumbotron .lead{
+	padding-top: 300px;
+}
+
+.bg-translucido{
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.lineatitulo{
+	border-color: black;
+	width: 70px;
+}
+
+
+main .card {
+    border: 0px;
+    border-radius: 0rem;
+    margin-bottom: 25px;
+}
+
+main .card-img-top{
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 4rem !important;
+}
+
+.card-title {
+    margin-bottom: .75rem;
+    color: black;
+    font-weight: bold;
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: transparent;
+    border-top: 0px;
+    color: black !important;
+    font-size: 120%;
+}
+.texto{
+	color: black;
+}
+
+#ourstory{
+	padding: 30px 0px;
+}
+
+
+.form-control::placeholder{
+	font-weight: bold;
+	color: #999999;
+}
+
+.form-control{
+	border: 0px;
+	border-bottom: 1px solid #eee;
+}
+
+.form-group textarea{
+	border: 1px solid #eee;
+}
+
+.form-group label{
+	font-weight: bold;
+	color: #999999;
+	padding-left: 12px;
+}
+
+.btn-secondary {
+    color: #444;
+    background-color: #999;
+    border-color: transparent;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: black;
+    border-color: transparent;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #444;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(0,0,0,0);
+}
+
+.rss{
+	max-width: 30%;
+	margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+
+	.texto h5{
+		text-align: center;
+		padding: 20px 0px;
+	}
+
+
+}
+
+
+
+

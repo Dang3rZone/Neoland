@@ -1,0 +1,8 @@
+<div *ngIf="imagenes && imagenes.length > 0">
+    <h3>{{ imagenes[imagenActual].titulo }}</h3>
+    <img [src]="imagenes[imagenActual].url" alt="">
+    <p>{{ imagenes[imagenActual].descripcion }}</p>
+    <button class="btn btn-success" (click)="onClick(false)" [disabled]="imagenActual === 0">Anterior</button>
+    <button class="btn btn-primary ml-1" (click)="onClick(true)"
+        [disabled]="imagenActual === imagenes.length-1">Siguiente</button>
+</div>

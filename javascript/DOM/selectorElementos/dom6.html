@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div></div>
+    <div>
+        <p id="uno">un parrafo</p>
+    </div>
+    <div>
+        <p>un parrafo</p>
+    </div>
+
+    <script>
+
+        let parrafoUno = document.getElementById('uno');
+
+        let textoDentroParrafo = parrafoUno.innerText;
+
+        console.log(textoDentroParrafo);
+
+        textoDentroParrafo = 'Hola';
+
+        console.log(textoDentroParrafo);
+
+        parrafoUno.innerText = 'estoy cambiando la frase';
+
+    </script>
+
+</body>
+
+</html>

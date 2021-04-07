@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos en bloque y en linea</title>
+    <style>
+        span {
+            font-weight: bold;
+            color: red;
+        }
+
+        strong {
+            font-weight: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- existe dos tipo de elementos: BLOQUE Y LINEA-->
+    <!-- BLOQUE: ocupa siempre el 100% del ancho de la pantalla o del elemento que lo contiene. NO tiene altura . La altura se la da los elementos que lo contienen. A un elemento en bloque se le puede asignar altura y anchura.-->
+
+
+    <!-- LINEA: ocupa solo lo que contiene tanto del alto como de ancho. no se le puede asignar altura ni anchura. (margin - padding).-->
+
+    <p style="background-color: red;">hola</p>
+    <p style="background-color: red;">hola</p>
+
+    <span>Hola</span>
+    <a href="">Adios</a>
+
+    <section>
+        <p>Lorem <span>malo</span> ipsum dolor sit amet consectetur, <strong>Juan</strong> elit. Vitae amet
+            necessitatibus, sed totam
+            nisi
+            fuga <em>Perez</em>.
+            Corporis culpa aperiam <del>amet</del> quod. Inventore fugit et enim exercitationem. Et, corporis assumenda.
+            Nobis.
+        </p>
+    </section>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deleniti repellat beatae dolores
+        exercitationem
+        fuga. Possimus nam, odio natus, est esse quidem deleniti iure illo placeat eveniet quam et sint!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi cupiditate, soluta voluptatibus repudiandae
+        ducimus
+        sint a, perferendis hic, veniam eos dolor eaque dicta ullam laudantium alias quisquam sunt provident asperiores!
+    </p>
+
+    <!-- cosas importantes -->
+
+    <!-- un elemnento en bloque puede contener mas elementos en bloque o elemento en linea -->
+
+    <!-- IMPORTANTE: un elemento en linea no puede contener un elemento en bloque. -->
+
+    <section>
+        <h2>Noticias</h2>
+        <article>
+            <a href="">
+                <img src="https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2021/01/11/temporal-de-nieve-en-la-comunidad-de-madrid.jpeg"
+                    alt="">
+            </a>
+            <h3> <a href="">Nevada en madrid</a></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, natus.</p>
+
+        </article>
+
+        <a href="" style="display: block;">
+            <article>
+                <figure>
+                    <img src="https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2021/01/11/temporal-de-nieve-en-la-comunidad-de-madrid.jpeg"
+                        alt="">
+                </figure>
+                <h3>Nevada en madrid</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, recusandae?</p>
+            </article>
+        </a>
+    </section>
+
+
+
+</body>
+
+</html>

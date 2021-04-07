@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones de callback</title>
+</head>
+
+<body>
+
+    <script>
+
+        //una funcion de callback es un funcion que se pasa como parmetro de otra.
+
+        //opcion 1
+
+        function saludar(pNombre) {
+            document.write('<h1>Hola ' + pNombre + '</h1>');
+        }
+
+        saludar(prompt('Dame un tu nombre')); //prompt esta actuando de callback
+
+        //opcion 2 -- funciones anonimas
+
+        function calcular(pFunctionCallback) {
+            pFunctionCallback(3, 5)
+        }
+
+        calcular(function (pNumeroA, pNumeroB) {
+            console.log(pNumeroA + pNumeroB);
+        })
+
+        //funcion flecha
+
+        calcular( (pNumeroA, pNumeroB) => console.log(pNumeroA + pNumeroB) )
+
+
+
+    </script>
+
+</body>
+
+</html>

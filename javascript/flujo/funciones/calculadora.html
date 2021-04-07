@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <script>
+
+        //realizar una programa que me permita recibir dos numeros cualquiera, y me pregunte que tipo de operacion quiero realizar, (suma, resta, multiplicacion). Posteriormente me pondra el resultado por pantalla en html
+
+        calcular('sumar', 3, 4);
+        calcular('restar', 12, 5);
+        calcular('multiplicar', 5, 5);
+        calcular('dividir', 10, 2);
+
+        function calcular(pOperacion, pNumeroA, pNumeroB) {
+            let resultado;
+            let primerNumero = pNumeroA;
+            let segundoNumero = pNumeroB;
+
+            switch (pOperacion) {
+                case 'sumar':
+                    //sumar dos numeros
+                    resultado = sumar(primerNumero, segundoNumero)
+                    break;
+
+                case 'restar':
+                    //restar dos numeros
+                    resultado = restar(primerNumero, segundoNumero)
+                    break;
+
+                case 'multiplicar':
+                    //multiplicar dos numeros
+                    resultado = multiplicar(primerNumero, segundoNumero)
+                    break;
+
+                case 'dividir':
+                    //multiplicar dos numeros
+                    resultado = dividir(primerNumero, segundoNumero)
+                    break;
+
+            }
+
+            pintar(resultado, pOperacion, primerNumero, segundoNumero)
+
+        }
+
+        function dividir(pPrimerNumero, pSegundoNumero) {
+            return pPrimerNumero / pSegundoNumero;
+        }
+
+        function pintar(pResultado, pOperacion, pPrimerNumero, pSegundoNumero) {
+            document.write(`<h1>El resultado de ${pOperacion} de ${pPrimerNumero} y ${pSegundoNumero} es igual a ${pResultado}</h1>`)
+        }
+
+        function sumar(pPrimerNumero, pSegundoNumero) {
+            return pPrimerNumero + pSegundoNumero;
+        }
+
+        function restar(pPrimerNumero, pSegundoNumero) {
+            return pPrimerNumero - pSegundoNumero;
+        }
+
+
+        function multiplicar(pPrimerNumero, pSegundoNumero) {
+            return pPrimerNumero * pSegundoNumero;
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

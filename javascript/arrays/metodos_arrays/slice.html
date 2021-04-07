@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //slice al contrario que splice no modifica el array principal. Simplemente realiza una copia de los elementos que le marquemos. De uno o varias posiciones.
+
+        //slice solo funcion con elementos consecutivos. Recibe dos parametros el primero la posicion de la parto y termina en la posicion que le marquemos sin incluirla.
+
+        const listaAnimales = new Array('León', 'Gato', 'Periquito', 'Aguila', ' ');
+
+        const listaAnimalesDomesticos = listaAnimales.slice(2, 5) //periquito, aguila y hipopotamo
+
+        console.log(listaAnimalesDomesticos);
+
+        //ultimo elemento
+
+        const ultimoElemento = listaAnimales.slice(listaAnimales.length - 1, listaAnimales.length);
+
+        const ultimoElemento2 = listaAnimales.slice(-1);
+
+        console.log(ultimoElemento, ultimoElemento2);
+
+        //
+
+        const lista = listaAnimales.slice(-3, -2);
+        console.log(lista);
+
+
+    </script>
+
+</body>
+
+</html>

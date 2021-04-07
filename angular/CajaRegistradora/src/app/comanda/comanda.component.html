@@ -1,0 +1,7 @@
+<p class="mt-5">TOTAL: {{ calcularPrecio() }}€</p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let producto of arrProductos; let indice = index;">
+        {{ producto.nombre }} - {{ producto.precio }}€
+        <button class="btn btn-sm btn-danger" (click)="onClick(indice)">Eliminar</button>
+    </li>
+</ul>

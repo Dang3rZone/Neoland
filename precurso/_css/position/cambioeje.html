@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de eje</title>
+    <!-- un cambio de eje conlleva un contenedor relativo y un contenido absoluto. Queremos que el contenido coja como eje de coordenadas al contenedor.-->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        section article {
+            border: 2px solid black;
+            max-width: 300px;
+            text-align: center;
+            margin: 200px auto;
+            position: relative;
+
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .descuento {
+            background-color: red;
+            color: white;
+            padding: 25px 10px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: -25px;
+            right: -25px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <article>
+            <figure>
+                <img src="https://www.prolaboral.es/WebRoot/StoreES/Shops/63783229/5122/6205/96A6/2702/6395/C0A8/2935/B18A/camiseta-roly-dogo-azuloceano_m.jpg"
+                    alt="">
+            </figure>
+            <div>
+                <h3>Camiseta lisa azul</h3>
+                <p>Precio: <del>25</del> - 12 euros</p>
+            </div>
+
+            <div class="descuento">
+                25%
+            </div>
+        </article>
+        <article>
+            <figure>
+                <img src="https://www.prolaboral.es/WebRoot/StoreES/Shops/63783229/5122/6205/96A6/2702/6395/C0A8/2935/B18A/camiseta-roly-dogo-azuloceano_m.jpg"
+                    alt="">
+            </figure>
+            <div>
+                <h3>Camiseta lisa azul</h3>
+                <p>Precio: <del>25</del> - 12 euros</p>
+            </div>
+
+            <div class="descuento">
+                25%
+            </div>
+        </article>
+        <article>
+            <figure>
+                <img src="https://www.prolaboral.es/WebRoot/StoreES/Shops/63783229/5122/6205/96A6/2702/6395/C0A8/2935/B18A/camiseta-roly-dogo-azuloceano_m.jpg"
+                    alt="">
+            </figure>
+            <div>
+                <h3>Camiseta lisa azul</h3>
+                <p>Precio: <del>25</del> - 12 euros</p>
+            </div>
+
+            <div class="descuento">
+                25%
+            </div>
+        </article>
+    </section>
+
+</body>
+
+</html>

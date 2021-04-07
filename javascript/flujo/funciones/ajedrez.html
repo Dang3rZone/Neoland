@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <div style="display: flex;">
+        <div style="background-color: black; width: 100px; height: 100px;"></div>
+        <div style="background-color: black; width: 100px; height: 100px;"></div>
+        <div style="background-color: black; width: 100px; height: 100px;"></div>
+        <div style="background-color: black; width: 100px; height: 100px;"></div>
+    </div>
+    -->
+
+
+    <script>
+
+        //quiero que pinteis un tablero de ajedrez las celdas van ser grises y negras.
+
+        //me pedireis por pantalla numero casillas y tamaño de la casilla
+
+
+        //el problema se divide en tres partes
+        //1 es construir una casilla
+        //2 es construir una fila - es que la fila tiene que poder elegir el color en el que empieza
+        //3 contruir el tablero
+
+        function pintarCasilla(pTamano, pColor) {
+            const casilla = `<div style="background-color: ${pColor}; width: ${pTamano}px; height: ${pTamano}px;"></div>`;
+            return casilla;
+        }
+
+
+        function pintarFila(pNumeroCasillas, pTamano, pColorInicio, pSegundoColor) {
+            let fila = '<div style="display: flex;">'
+            //entre medias de la apertura y cierre de la fila pinta las casillas que forman la fila.
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                let color = (i % 2 != 0) ? pColorInicio : pSegundoColor;
+                fila += pintarCasilla(pTamano, color);
+            }
+            fila += '</div>';
+
+            document.write(fila);
+        }
+
+        function pintarTablero(pNumeroCasillas, pTamanoCasillas) {
+
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                let colorInicial = (i % 2 != 0) ? 'red' : 'black';
+                let colorSecundario = (i % 2 != 0) ? 'black' : 'red';
+                pintarFila(pNumeroCasillas, pTamanoCasillas, colorInicial, colorSecundario);
+            }
+
+        }
+
+
+        let numeroCasillas = parseInt(prompt('Dame un numero de casillas'));
+        let tamano = parseInt(prompt('Dame un tamaño en pixeles de la casilla'));
+
+        pintarTablero(numeroCasillas, tamano);
+
+    </script>
+
+
+</body>
+
+</html>

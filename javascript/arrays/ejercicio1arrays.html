@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 arrays</title>
+
+    <style>
+        .fondoAzul {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .fondoVerde {
+            background-color: lightgreen;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //quiero pintar un menu de navegación, dicho menu viene dado por un array simple que contiene todas las secciones.
+        // 0 - crear un array con las secciones inicio, contacto, galeria, servicios
+        //1 - pintar en un listado no numerado el menu que tiene array. 
+        //2 - El color de fondo de cada boton será azul y verde consecutivamente. 
+
+        const navegacion = new Array('inicio', 'contacto', 'galeria', 'servicios');
+
+        //opcion 1 
+
+        let listado = '<ul>';
+
+        for (let i = 0; i < navegacion.length; i++) {
+            const clase = (i % 2 == 0) ? 'fondoVerde' : 'fondoAzul';
+            listado += `<li class="${clase}">${navegacion[i]}</li>`;
+        }
+
+        listado += '</ul>';
+
+        document.write(listado);
+
+        //opcion 2
+
+        let listado2 = '<ul>';
+
+        let contador = 1;
+        for (let seccion of navegacion) {
+            let clase = (contador % 2 == 0) ? 'fondoVerde' : 'fondoAzul'
+            listado2 += `<li class="${clase}">${seccion}</li>`;
+            contador++;
+        }
+
+        listado2 += '</ul>';
+
+        document.write(listado2);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <script>
+
+        //dados 54321 segundos quiero me calculeis la cantidad de horas, minutps y segundos que hay en dicha cantidad dada.
+
+        //por consola el valor total de horas minutos y segundos 
+
+        //una aplicacion tiene que funcionar para cualquier valor dado
+
+        const SEGUNDOS_TOTALES = parseInt(prompt('Dame una cantidad de segundos'));
+
+        console.log(typeof SEGUNDOS_TOTALES);
+        var horas;
+        var minutos;
+        var segundosFinales;
+
+        horas = SEGUNDOS_TOTALES / (60 * 60);
+        segundosFinales = SEGUNDOS_TOTALES % (60 * 60);
+
+        minutos = segundosFinales / 60;
+        segundosFinales = segundosFinales % 60;
+
+        //reglas de parseo - me convertir datos
+        horas = parseInt(horas); //15
+
+        //reglas de redonde
+        minutos = Math.trunc(minutos); //5
+
+
+        console.log('En ' + SEGUNDOS_TOTALES + ' hay ' + horas + ' horas, ' + minutos + ' minutos, ' + segundosFinales + ' segundos');
+
+    </script>
+
+</body>
+
+</html>

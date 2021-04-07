@@ -1,0 +1,14 @@
+@import url(reset.css);
+body {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+section article {
+    width: 400px;
+    height: 200px;
+    background-color: violet;
+}

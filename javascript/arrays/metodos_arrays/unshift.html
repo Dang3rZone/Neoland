@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unshift</title>
+</head>
+
+<body>
+
+    <script>
+
+        //unshift: introduce elementos por el principio del array, por la primeras posiciones. Recalcula la posicion de los elementos dentro de la lista.
+
+        const listaAnimales = new Array('León', 'Gato', 'Periquito');
+
+        let animal = 'Cuervo';
+
+        listaAnimales.unshift(animal, 'cocodrilo');
+
+        console.log(listaAnimales);
+
+
+        //si yo meto un elemento en una posicion concreta y esta esta ocupada, sobrescribo el valor.
+
+        listaAnimales[2] = "Juan";
+
+        console.log(listaAnimales);
+
+
+    </script>
+
+</body>
+
+</html>

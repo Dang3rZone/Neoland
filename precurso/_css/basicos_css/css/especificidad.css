@@ -1,0 +1,21 @@
+#articulo4 {
+    background-color: blue;
+}
+
+#articulo5 {
+    background-color: brown;
+}
+
+.articulos {
+    background-color: green;
+}
+
+.articulos {
+    background-color: royalblue;
+}
+
+article {
+    background-color: tomato;
+   /*  OJO CON EL USO DE !important */
+
+}

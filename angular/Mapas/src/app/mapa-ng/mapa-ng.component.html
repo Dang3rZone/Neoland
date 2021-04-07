@@ -1,0 +1,19 @@
+<agm-map [latitude]="latitud" [longitude]="longitud" [zoom]="17" [fitBounds]="true">
+    <agm-marker [latitude]="latitud" [longitude]="longitud"></agm-marker>
+
+    <agm-kml-layer url="https://datos.madrid.es/egob/catalogo/202088-0-trafico-camaras.kml"></agm-kml-layer>
+
+    <agm-marker *ngFor="let pais of paises" [latitude]="pais.latlng[0]" [longitude]="pais.latlng[1]"
+        [agmFitBounds]="true" [iconUrl]="{ url: pais.flag, scaledSize: { width: 20, height: 15 } }">
+        <agm-info-window>
+            <h3>{{ pais.translations.es }}</h3>
+            <p></p>
+            <ul>
+                <li>Uno</li>
+                <li>Dos</li>
+                <li>Tres</li>
+            </ul>
+        </agm-info-window>
+    </agm-marker>
+
+</agm-map>

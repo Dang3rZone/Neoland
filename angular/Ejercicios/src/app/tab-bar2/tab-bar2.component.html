@@ -1,0 +1,13 @@
+<div class="botones">
+    <button *ngFor="let seccion of secciones" [ngClass]="{ activo: (tabSeleccionada === seccion) }"
+        (click)="onClick(seccion)">
+        {{ seccion }}
+    </button>
+</div>
+<div [ngSwitch]="tabSeleccionada">
+    <p *ngSwitchCase="'stats'">Párrafo de Stats</p>
+    <p *ngSwitchCase="'calendar'">Este es el calendario</p>
+    <p *ngSwitchCase="'support'">Página de Support</p>
+    <p *ngSwitchCase="'social'">Redes sociales</p>
+    <p *ngSwitchCase="'documentation'">La Documentación</p>
+</div>

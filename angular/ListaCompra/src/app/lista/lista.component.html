@@ -1,0 +1,7 @@
+<div class="lista">
+    <div class="producto" *ngFor="let producto of productos; let indice = index;" (click)="onClick(indice)">
+        <h4>{{ producto.nombre }}</h4>
+        <p>{{ producto.cantidad }}</p>
+        <p>{{ producto.departamento }}</p>
+    </div>
+</div>

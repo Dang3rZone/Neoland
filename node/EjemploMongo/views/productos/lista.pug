@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block content
+    h1 Lista de productos
+    table.table
+        thead
+            tr
+                th Nombre
+                th Precio
+                th Precio + IVA
+                th Departamento
+                th Activo
+                th Fecha Inserción
+                th Imagen
+                th Acciones
+        tbody
+            each producto in productos
+                tr
+                    td=producto.nombre 
+                    td #{producto.precio} €
+                    td #{producto.precio_iva} €
+                    td=producto.departamento 
+                    td=producto.activo 
+                    td=producto.fecha_insercion
+                    td
+                        img(src=producto.imagen, width="100")
+                    td
+                        a.btn.btn-sm.btn-danger(href="/productos/edit/"+producto._id) Editar
+                        a.btn.btn-sm.btn-danger(href="/productos/delete/"+producto._id, onclick="return confirm('¿Estás seguro?')") Eliminar

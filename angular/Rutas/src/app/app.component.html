@@ -1,0 +1,31 @@
+<h1>Cabecera de la página</h1>
+
+<ul class="menu">
+  <li>
+    <a [routerLink]="['']" routerLinkActive="activo">Home</a>
+  </li>
+  <li>
+    <a [routerLink]="['informacion']" routerLinkActive="activo">Información</a>
+  </li>
+  <li>
+    <a [routerLink]="['contacto']" routerLinkActive="activo">Contacto</a>
+  </li>
+  <li>
+    <a [routerLink]="['blog']" routerLinkActive="activo">Blog</a>
+  </li>
+  <li>
+    <a [routerLink]="['productos', 123]">Producto 123</a>
+    <!-- /productos/123 -->
+  </li>
+</ul>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<div class="botones">
+  <button (click)="onClick('')">Home</button>
+  <button (click)="onClick('informacion')">Información</button>
+  <button (click)="onClick('contacto')">Contacto</button>
+  <button (click)="onClick('blog')">Blog</button>
+</div>

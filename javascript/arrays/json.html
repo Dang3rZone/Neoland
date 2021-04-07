@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal - Json</title>
+</head>
+
+<body>
+
+    <script>
+
+        //JSON JavaScript Object Notation. Se un concepto de array asociativo. -> desaparece el concepto de posicion para introducir el concepto de clave: valor
+
+        const producto = {
+            nombre: 'Leche',
+            capacidad: 1.5,
+            precio: 0.80,
+            stock: true
+        }
+
+        console.log(producto);
+
+        //nomeclatura de punto - más utilizada
+
+        console.log(producto.nombre); //leche
+
+        //nomeclatura de corchete - menos utilizada pero tiene mayor versatilidad.
+
+        console.log(producto['capacidad']);
+
+        let tipo = prompt('Dime que dato quieres, precio, capacidad, stock');
+
+        //console.log(producto.tipo) //error 
+
+        console.log(producto[tipo]) //0.80
+
+        //si un json no es iterable, no puedo recorrer sus propiedades con un bucle. Necesito un bucle especial FOR IN
+
+        for (let clave in producto) {
+            document.write(`<h1> ${clave} : ${producto[clave]}</h1>`)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

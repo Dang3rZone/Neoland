@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelectorAll</title>
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Galeria</a></li>
+        </ul>
+    </header>
+
+    <footer>
+        <ul>
+            <li><a href="">Cookies</a></li>
+        </ul>
+    </footer>
+
+
+    <script>
+
+        // let ulprimero = document.getElementsByTagName('ul')[0];
+        // let enlaces = ulprimero.getElementsByTagName('a');
+
+        //querySelectorAll selecciona del html todos los elementos en un lista de nodos(elementos html)  que cumplan la condicion css de los parentesis.
+
+        let enlaces = document.querySelectorAll('header ul a');
+        console.log(enlaces);
+
+        enlaces.forEach(enlace => enlace.innerText = "hola");
+
+    </script>
+
+
+</body>
+
+</html>

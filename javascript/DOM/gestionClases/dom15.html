@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 15 -gestion de clases</title>
+    <style>
+        .caja {
+            width: 250px;
+            height: 100px;
+            background-color: black;
+            transition: 1s;
+        }
+
+        .verde {
+            background-color: green;
+            border-radius: 50%;
+            margin-left: 300px;
+        }
+
+        .rojo {
+            background-color: tomato;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="caja verde rojo" id="pepe"></div>
+
+
+    <script>
+
+        let div = document.querySelector('div');
+        //console.log(div.className);
+        //console.log(div.id);
+
+        //div.className += " rojo"; //caja verde rojo 
+
+        //es6 classList, me devuelve un array de clases 
+
+        console.log(div.classList); //obtengo un array de nombres de clases
+
+        div.classList.add("rojo"); //añadir una clase a la lista de Clases
+
+        div.classList.remove('verde');//quitar una clase que esta añadida a el lista
+
+        div.classList.replace('rojo', 'verde'); //cambio una clase por otra 
+
+
+        function cambiarClase() {
+            div.classList.toggle('rojo')
+            //metodo que se llama de tipo interruptor, si existe la clase la quita y no existe la añade
+        }
+
+        /*
+        let intervalo = setInterval(() => {
+            div.classList.toggle('rojo')
+        }, 1000);
+
+        */
+
+
+
+    </script>
+
+</body>
+
+</html>

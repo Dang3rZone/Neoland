@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .uno {
+            background-color: tomato;
+        }
+
+        .dos {
+            background-color: lightblue;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            z-index: -1;
+        }
+
+        .tres {
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- absolute: tambien del flujo del resto del html, pero responde al scroll, se situa siempre respecto al 0,0 esquina superior izquierda-->
+    <div class="uno">1</div>
+    <div class="dos">2</div>
+    <div class="tres">3</div>
+
+</body>
+
+</html>

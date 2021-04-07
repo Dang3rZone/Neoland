@@ -1,0 +1,18 @@
+@import url(reset.css);
+body {
+    /* esta 'estipulado' que un 1em equivale a, en situacion normales, a 16px;*/
+    font-size: 16px;
+    /*1em 24px*/
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+section {
+    font-size: 2em;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 4</title>
+    <style>
+        .caja {
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>izquierda</button>
+    <button>derecha</button>
+    <button>arriba</button>
+    <button>abajo</button>
+
+    <div class="caja"></div>
+
+    <script>
+
+        //listeners
+
+        let buttons = document.querySelectorAll('button');
+        let caja = document.querySelector('.caja');
+        let avanceX = 0;
+        let avanceY = 0;
+
+        buttons.forEach(button => button.addEventListener('click', mover))
+
+        function mover(event) {
+            switch (event.target.innerText) {
+
+                case 'derecha':
+                    avanceX += 20;
+                    //caja.style.marginLeft = avanceX + 'px';
+                    break;
+                case 'izquierda':
+                    avanceX -= 20;
+                    //caja.style.marginLeft = avanceX + 'px';
+                    break;
+                case 'arriba':
+                    avanceY -= 20;
+                    // caja.style.marginTop = avanceY + 'px';
+                    break;
+                case 'abajo':
+                    avanceY += 20;
+                    // caja.style.marginTop = avanceY + 'px';
+                    break;
+            }
+            caja.style.transform = `translateX(${avanceX}px) translateY(${avanceY}px)`;
+        }
+    </script>
+</body>
+
+</html>

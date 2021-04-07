@@ -1,0 +1,15 @@
+<select (change)="onChange($event)">
+    <option value="todos">TODOS</option>
+    <option *ngFor="let categoria of listaCategorias" [value]="categoria">
+        {{ categoria.toUpperCase() }}
+    </option>
+</select>
+<div class="productos">
+    <div class="producto" *ngFor="let producto of listaProductos">
+        <h3 class="name">{{ producto.name }}</h3>
+        <img [src]="producto.image" alt="">
+        <p class="price">{{ producto.price }}€</p>
+        <button (click)="onClick(producto)">Add Cart</button>
+        <button [routerLink]="['/shop', producto.id]">Ver Producto</button>
+    </div>
+</div>

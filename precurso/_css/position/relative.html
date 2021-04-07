@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            position: relative;
+        }
+
+        .uno {
+            background-color: tomato;
+        }
+
+        .dos {
+            background-color: lightblue;
+            top: 100px;
+            left: 50px;
+            z-index: 1;
+
+        }
+
+        .tres {
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- relative: permite desplezar el objeto respeto a una posicion inicial (su posicion static) a partir puedo mover el elemento no con margenes si no top left, bottom right-->
+
+    <div class="uno">1</div>
+    <div class="dos">2</div>
+    <div class="tres">3</div>
+
+</body>
+
+</html>

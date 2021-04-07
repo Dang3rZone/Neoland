@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad</title>
+    <link rel="stylesheet" href="css/especificidad.css">
+</head>
+
+<body>
+
+    <section>
+        <h2>Titulo de seccion</h2>
+        <article>
+            <h3>Titulo articulo 1</h3>
+        </article>
+        <article class="articulos">
+            <h3>Titulo articulo 2</h3>
+        </article>
+        <article class="articulos">
+            <h3>Titulo articulo 3
+            </h3>
+        </article>
+        <article class="articulos" id="articulo4" style="background-color: black">
+            <h3>Titulo articulo 4</h3>
+        </article>
+
+        <article class="articulos" id="articulo5">
+            <h3>Titulo articulo 5</h3>
+        </article>
+
+    </section>
+
+</body>
+
+</html>

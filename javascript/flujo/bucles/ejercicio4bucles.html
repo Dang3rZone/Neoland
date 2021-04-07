@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 bucles</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //hacer un script que me permita elegir entre cuadrado y circulo. IMPORTANTE si me dan una figura que no tengo vuelvo a pedir el poligono.
+
+        //pedir un cantidad de poligono 
+
+        //situarlos en escalera
+
+        do {
+            var poligono = prompt('Dime un poligono, cuadrado o círculo');
+            poligono = poligono.toLowerCase();
+        } while (poligono != 'cuadrado' && poligono != 'círculo')
+
+        const cantidad = parseInt(prompt('Dime cuantos poligonos quieres'));
+
+        for (var i = 0; i < cantidad; i++) {
+            var radio = (poligono == "cuadrado") ? "0%" : "50%";
+            var margenleft = i * 100;
+            document.write(`<div style="width: 100px; height: 100px; border-radius: ${radio}; margin-bottom: 10px; background-color: black; margin-left: ${margenleft}px"></div>`);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

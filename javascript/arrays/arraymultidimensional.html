@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array multidimensional</title>
+</head>
+
+<body>
+
+    <script>
+
+        const aves = ['Águila', 'Guacamayo', 'Cotorra', 'Gallina'];
+        const felinos = ['León', 'Tigre', 'Pantera'];
+        const anfibios = ['Rana', 'Salamandra', 'Cocodrilo'];
+
+        const zoo = [aves, felinos, anfibios];
+
+        //un array multidimensional es un array de arrays.
+
+        console.log(zoo);
+
+        //como se recorre un array multidimensional, tengo dos dimensiones la que me posiciona en el array simple y la que recorre el array simple
+
+        //ejemplo 
+        zoo[1][0] //leon
+        zoo[2][0] //rana;
+
+        //opciones for i
+
+        for (let i = 0; i < zoo.length; i++) {
+            //eligiendo el array especie
+            for (let j = 0; j < zoo[i].length; j++) {
+                console.log(zoo[i][j]);
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

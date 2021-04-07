@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <app-formulario (productoCreado)="onProductoCreado($event)"></app-formulario>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h4>Por comprar</h4>
+      <app-lista [productos]="arrProductos" (cambiaProducto)="onProductoComprado($event)"></app-lista>
+    </div>
+    <div class="col-6">
+      <h4>Comprados</h4>
+      <app-lista [productos]="arrProductosComprados" (cambiaProducto)="onProductoDevuelto($event)"></app-lista>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display inlineblock - colocamelo en linea pero conserva la capacidad de bloque</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav .menu {
+            list-style: none;
+            background-color: lightblue;
+            border-bottom: 2px solid darkblue;
+            padding: 20px;
+        }
+
+        header nav .menu li {
+            display: inline-block;
+
+        }
+
+        header nav .menu li a {
+            display: block;
+            background-color: darkcyan;
+            padding: 20px;
+            margin: 0px 10px 20px 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="">Elemento 1</a></li>
+                <li><a href="">Elemento 2</a></li>
+                <li><a href="">Elemento 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+
+</html>

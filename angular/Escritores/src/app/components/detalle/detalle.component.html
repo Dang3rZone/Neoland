@@ -1,0 +1,17 @@
+<div *ngIf="escritor">
+    <h2 id="escritor{{escritor.id}}">{{ escritor.nombre }} {{ escritor.apellidos }}</h2>
+    <img [src]="escritor.imagen">
+    <p>País: {{ escritor.pais }}</p>
+
+    <button [routerLink]="['/escritores', escritor.id-1, 'libros']">Anterior Escritor</button>
+    <button [routerLink]="['/escritores', escritor.id+1, 'libros']">Siguiente Escritor</button>
+
+    <button [routerLink]="['/escritores', escritor.id]">NO LIBROS</button>
+    <button [routerLink]="['/escritores', escritor.id, 'libros']">SÍ LIBROS</button>
+
+    <button (click)="onClick()">
+        {{ mostrarLibros ? 'OCULTAR' : 'MOSTRAR' }}
+    </button>
+
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio MAP</title>
+</head>
+
+<body>
+
+    <script>
+
+        //tengo un array de nombres
+
+        const arrayNombres = new Array('Juan', 'Miguel', 'Raul', 'Teresa', ' Lucia');
+
+        // quiero una array nuevo donde los elementos de la lista sean los siguientes
+        // **juan**, **miguel**, **raul** , **teresa**, **lucia**
+
+        const arrayJuanan = arrayNombres.map(dato => `**${dato.toLowerCase()}**`)
+
+        console.log(arrayJuanan);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

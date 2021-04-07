@@ -1,0 +1,20 @@
+GET http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "nombre": "Felipe",
+    "email": "felipin_87@hotmail.com",
+    "edad": 45
+}
+
+###
+GET http://localhost:3000/products/detail
+
+###
+PUT http://localhost:3000/products/edit
+
+###
+GET http://localhost:3000/products/345

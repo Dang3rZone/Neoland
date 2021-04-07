@@ -1,0 +1,19 @@
+.semaforo {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.rojo {
+    background-color: tomato;
+}
+
+.amarillo {
+    background-color: goldenrod;
+}
+
+.verde {
+    background-color: lightgreen;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar elementos DOM</title>
+</head>
+
+<body>
+
+    <ul>
+        <li id="uno">UNO</li>
+        <li id="dos">DOS</li>
+        <li id="tres">TRES</li>
+    </ul>
+
+
+    <script>
+
+        function deleteItemDom(pLiItem) {
+            //para borrar elemento fisicamente del html necesito saber el padre de dicho 
+
+            let item = '#' + pLiItem //#dos
+            let elementoBorrar = document.querySelector(item);
+
+            //desde el padre hago removeChild() del hijo
+            elementoBorrar.parentNode.removeChild(elementoBorrar);
+        }
+
+    </script>
+
+
+</body>
+
+</html>

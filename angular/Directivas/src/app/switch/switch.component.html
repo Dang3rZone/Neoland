@@ -1,0 +1,19 @@
+<div [ngSwitch]="numero">
+    <p *ngSwitchCase="1">El número es uno</p>
+    <p *ngSwitchCase="2">El número es dos</p>
+    <p *ngSwitchCase="3">El número es tres</p>
+    <p *ngSwitchDefault>El número no se corresponde</p>
+</div>
+
+<select (change)="onChange($event)">
+    <option value="comercial">Dpto. Comercial</option>
+    <option value="desarrollo">Los de los ordenadores</option>
+    <option value="contabilidad">Dtpo. Contable</option>
+</select>
+
+<div [ngSwitch]="departamento">
+    <p *ngSwitchCase="'comercial'">Departamento Comercial</p>
+    <p *ngSwitchCase="'desarrollo'">Departamento Desarollo 😻</p>
+    <p *ngSwitchCase="'contabilidad'">Contabilidad 💰</p>
+    <p *ngSwitchDefault>No existe el departamento seleccionado</p>
+</div>

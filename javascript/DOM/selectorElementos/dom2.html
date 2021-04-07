@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Servicios</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+    </header>
+
+    <footer>
+        <ul>
+            <li><a href="">Aviso legal</a></li>
+            <li><a href="">Cookies</a></li>
+        </ul>
+    </footer>
+
+
+    <script>
+
+        //cambiar el texto del enlace en el segundo listado
+
+        //let segundoListado = document.getElementsByTagName('ul')[1];
+
+        let uls = document.getElementsByTagName('ul');
+        let segundoListado = uls[1];
+
+        //me esta seleccionando todos los <a> de segundolistado
+        let enlaces = segundoListado.getElementsByTagName('a');
+
+        for (let enlace of enlaces) {
+            enlace.innerText = "Juan";
+        }
+
+
+    </script>
+
+</body>
+
+</html>

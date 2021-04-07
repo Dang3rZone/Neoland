@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de elementos get</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, laboriosam.</p>
+    <section>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, accusantium!</p>
+        </article>
+    </section>
+
+
+
+    <script>
+
+        let parrafos = document.getElementsByTagName('p');
+        //console.log(parrafos);
+
+        console.log(parrafos[0]);
+
+        //sustituir el texto del parrafo 1 dinamicamente
+        parrafos[0].innerText = "hola";
+
+        //meter html dentro del parrafo
+
+        parrafos[1].innerHTML = "<strong>Adios</strong> hasta luego";
+
+
+    </script>
+</body>
+
+</html>

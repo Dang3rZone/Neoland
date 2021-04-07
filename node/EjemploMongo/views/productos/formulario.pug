@@ -1,0 +1,20 @@
+extends ../layout.pug
+
+block content 
+    h1 Inserta un nuevo producto 
+    form(action="/productos/create", method="POST")
+        .form-group
+            label Nombre
+            input.form-control(type="text", name="nombre")
+        .form-group
+            label Precio
+            input.form-control(type="number", name="precio")
+        .form-group
+            label Departamento
+            input.form-control(type="text", name="departamento")
+        .form-group
+            label Imagen
+            input.form-control(type="text", name="imagen")
+        input.btn.btn-block.btn-info(type="submit", value="Enviar")
+    
+    

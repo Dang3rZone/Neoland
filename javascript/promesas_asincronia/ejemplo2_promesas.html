@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas Ejemplo dos</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //quiero que monteis una promesa que me le pida una edad aleatoria. Si edad es mayor 18 entonces escribo en el body un h1 con 'bienvenido'. Si no escribo un alert con 'no puedes entrar'
+
+
+        function dimeTuEdad(pEdadMax) {
+            const prom = new Promise((resolve, reject) => {
+
+                let edadAleatoria = Math.random() * 100;
+
+                if (edadAleatoria < 18) {
+                    resolve('Un vasito de leche y la cama');
+                } else if (edadAleatoria >= 18 && edadAleatoria <= pEdadMax) {
+                    resolve('Bienvenido')
+                } else {
+                    reject('No es un parametro deseado');
+                }
+            })
+
+            return prom;
+        }
+
+
+        dimeTuEdad(30)
+            .then((pMensaje) => {
+                document.body.innerHTML = `<h1>${pMensaje}</h1>`;
+            })
+            .catch((pError) => {
+                alert(pError);
+            })
+
+
+        dimeTuEdad(65)
+            .then((pMensaje) => {
+                document.body.innerHTML = `<h1>${pMensaje}</h1>`;
+            })
+            .catch((pError) => {
+                alert(pError);
+            })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

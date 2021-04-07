@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPLICE - elimina un elemento en cualquier posicion.</title>
+</head>
+
+<body>
+
+    <script>
+
+        //SPLICE - elimina un elemento en cualquier posicion. Esta funcion recibe dos parametros, la primera es la posicion desde la cual queremos borrar y la segunda es la cantidad de elementos a borrar desde esa posicion. Devuelve el array de elemento que borro.
+
+        const listaAnimales = new Array('León', 'Gato', 'Periquito', 'Cocodrilo', 'Perro');
+
+
+        let animal = listaAnimales.splice(2, 1)// solo periquito
+
+        console.log(listaAnimales);
+        console.log(animal);
+
+        //elimina gato cocodrilo y perro
+
+        let animalesBorrados = listaAnimales.splice(1, 3);
+        console.log(listaAnimales);
+        console.log(animalesBorrados);
+
+
+        //tambien me permite remplazar un elemento o varios en una posicion concreta
+
+        listaAnimales.splice(1, 2, 'Ballena', 'Pepe');
+
+        console.log(listaAnimales);
+
+
+
+    </script>
+</body>
+
+</html>

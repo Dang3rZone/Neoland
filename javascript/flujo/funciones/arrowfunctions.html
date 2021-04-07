@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Flecha - arrow functions</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //la funcion flecha o arrow es una funcion anonima. VAGANCIA ES MAS CORTA
+
+        //como paso un funcion anonima a flecha en tres pasos 
+
+        //paso 1: quito la palabra function y la sustituyo por un flecha (=>) situada detras de los parentesis
+
+        //paso 2: solo si la funcion recibe un parametro puedo quitar los parentesis
+
+        //paso 3; si la funcion solo ejecuta una accion puedo quitar las llaves y si esta funcion es un return puedo quitar tambien el return
+
+
+        //funcion anonima - devuelve un parametro
+
+        const sumar = function (pNumeroA, pNumeroB) {
+            return pNumeroA + pNumeroB
+        }
+
+        const sumita = (pNumeroA, pNumeroB) => pNumeroA + pNumeroB;
+
+
+        //funcion anonima - pinta el resultado por pantalla
+
+        const restar = function (pNumeroA, pNumeroB) {
+            document.write(pNumeroA - pNumeroB);
+        }
+
+        const restita = (pNumeroA, pNumeroB) => document.write(pNumeroA - pNumeroB);
+
+        //funcion anomina - que realizada dentro de la funcion más de un accion
+
+        const media = (pNumeroA, pNumeroB) => {
+            const suma = pNumeroA + pNumeroB;
+            const resultado = suma / 2;
+
+            return resultado;
+        }
+
+
+    </script>
+</body>
+
+</html>

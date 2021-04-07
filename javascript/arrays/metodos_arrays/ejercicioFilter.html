@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio filter</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //tenemos una tienda virtual que vendemos paraguas.
+
+        const paraguas = [
+            {
+                nombre: 'Paraguas de mano desplegable',
+                tipo: 1,
+                color: 'gris'
+            },
+            {
+                nombre: 'Paraguas grande con cabeza de animal en el mando',
+                tipo: 2,
+                color: 'gris'
+            },
+            {
+                nombre: 'Paraguas de mano inteligente Xiaomi',
+                tipo: 1,
+                color: 'rojo'
+            },
+            {
+                nombre: 'Paraguas grande el inspector Gadget ',
+                tipo: 2,
+                color: 'negro'
+            },
+        ]
+        //alguien en mi tienda esta buscando un paraguas de mano de color rojo
+
+        //usamos filter por que puede haber mas de un paraguas que cumpla mi condicion.
+
+        const listaParaguasManoRojo = paraguas.filter(unParaguas => unParaguas.tipo == 1 || unParaguas.color == 'rojo');
+
+        console.log(listaParaguasManoRojo);
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+extends layout.pug
+
+block contenido
+    h1 Cabecera de la página
+    h2 Subtítulo de la página
+    div
+        p(id='primer', class='rojo verde') Primer párrafo
+        p#segundo.verde.rojo Segundo párrafo
+        p Tercer párrafo
+    div
+        a(href="http://www.google.es", target="_blank") Google.es
+    div 
+        p= mensaje
+        p El valor del mensaje es: #{mensaje}
+    // Comentario
+    //- Otro comentario
+    .cuarto
+        p Otro párrafo
+        p(class=clases) Párrafo con clases
+    .quinto 
+        //- Case
+        case productos
+            when 0
+                p No tienes productos
+            when 1
+                p Tienes un producto
+            default 
+                p Tienes #{productos} productos
+    .sexto 
+        //- Código JS
+        ul
+            - for(let i = 0; i< clases.length; i++)
+                li= clases[i]
+    .septimo 
+        //- Iteradores
+        ul 
+            each item in clases
+                li= item
+            else
+                li No tienes 
+    .container
+        .row
+            .col-8 Hola
+            .col-4 Adios
+
+block footer 
+    footer Pie de página para los estudiantes

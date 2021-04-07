@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach</title>
+</head>
+
+<body>
+
+    <script>
+
+        const listaAlumnos = [
+            {
+                nombre: 'Juan',
+                edad: 38
+            },
+            {
+                nombre: 'Lucia',
+                edad: 48
+            },
+            {
+                nombre: 'Pepe',
+                edad: 65
+            },
+        ]
+
+        for (let alumno of listaAlumnos) {
+            console.log(alumno.nombre);
+        }
+
+        //foreach lo que me permite es recoger el array de elementos
+
+        listaAlumnos.forEach(alumno => document.write(`<h1>${alumno.nombre} : ${alumno.edad}</h1>`))
+
+        listaAlumnos.forEach(function (alumno) {
+            document.write(
+                `<h2>${alumno.edad}</h2>`
+            )
+        })
+
+
+
+    </script>
+
+
+</body>
+
+</html>

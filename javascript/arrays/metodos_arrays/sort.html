@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Sort</title>
+</head>
+
+<body>
+
+    <script>
+
+        //sort es un metodo de ordenación básica.
+
+        const arrayNombres = new Array('Juan', 'Miguel', 'Raul', 'Teresa', 'Lucia');
+
+        console.log(arrayNombres.sort());
+
+        const arrayNumeros = new Array(9, 5, 10, 20, 1);
+        console.log(arrayNumeros.sort());
+
+        //la solucion es aplicar sort una funcion de condicion 
+        //mayor a menor b - a 
+        //menor a mayor a - b
+        const listaOrdenadaNumeros = arrayNumeros.sort(function (a, b) {
+            return a - b
+        })
+        console.log(listaOrdenadaNumeros);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

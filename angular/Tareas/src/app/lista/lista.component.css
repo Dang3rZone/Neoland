@@ -1,0 +1,18 @@
+.tarea {
+    padding: 30px;
+    background-color: lightsteelblue;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+
+.completa {
+    border: 1px solid lightgreen;
+}
+
+.incompleta {
+    border: 1px solid tomato;
+}
+
+i {
+    font-size: 40px;
+}

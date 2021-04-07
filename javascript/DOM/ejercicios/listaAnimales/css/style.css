@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main section {
+    margin: 20px;
+    padding: 20px;
+}
+
+main section .flex {
+    display: flex;
+}
+
+main section .flex article {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.peligrosos {
+    background-color: lightsalmon;
+}
+
+.cuidado {
+    background-color: lightgreen;
+}
+
+.dociles {
+    background-color: lightblue;
+}

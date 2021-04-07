@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de funciones de calback</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //funcion normal
+        function sumar(pNumeroA, pNumeroB) {
+            return pNumeroA + pNumeroB
+        }
+
+        //funcion anonima 
+
+        const resta = function (pNumeroA, pNumeroB) {
+            return pNumeroA - pNumeroB
+        }
+
+
+        //function arrow
+
+        const multiplicar = (pNumeroA, pNumeroB) => pNumeroA * pNumeroB;
+
+
+        //funcion que pinta el resultado
+
+        function pintarResultado(pFuncionOperacion) {
+            let resultado = pFuncionOperacion(3, 4);
+            console.log(resultado);
+        }
+
+        pintarResultado(multiplicar);
+        pintarResultado(resta);
+
+        pintarResultado(function sumar(pNumeroA, pNumeroB) {
+            return pNumeroA + pNumeroB
+        })
+
+        pintarResultado((pNumeroA, pNumeroB) => pNumeroA * pNumeroB)
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

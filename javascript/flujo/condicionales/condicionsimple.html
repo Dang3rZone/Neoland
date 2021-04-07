@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional Simple</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const nota = parseInt(prompt('Dame tu nota'));
+
+        //condicional simple
+        if (nota >= 5) {
+            alert('aprobado');
+        }
+
+        //condicional con secuencia de escape
+
+        if (nota >= 5) {
+            alert('has aprobado');
+        } else {
+            alert('has suspendido');
+        }
+
+        //eficiencia de codigo
+
+        if (nota >= 0 && nota < 5) {
+            alert('estas supendido');
+        } else {
+            alert('estas aprobado');
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

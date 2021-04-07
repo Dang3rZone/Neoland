@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tarea.js"></script>
+    <script src="js/model.js"></script>
+</head>
+
+<body>
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12">
+                    <div class="card px3">
+
+                        <div class="card-body">
+                            <h2 class="text-center mb-3">TODO's APP</h2>
+                            <div class="add-items">
+                                <form action="" class="d-flex">
+                                    <input type="text" id="inputTitle" class="form-control todo-list-input"
+                                        placeholder="¿Qué es lo que vas hacer hoy?">
+                                    <select class="form-control ml-2" id="selectCategory">
+                                        <option value="">Selecciona un prioridad</option>
+                                        <option value="urgente">Urgente</option>
+                                        <option value="diario">Diaria</option>
+                                        <option value="mensual">Mensual</option>
+                                    </select>
+                                    <input type="submit" id="btnAdd"
+                                        class="add btn btn-primary font-weight-bold todo-list-add-btn" value="Añadir">
+                                </form>
+                            </div>
+                            <div id="alert"></div>
+                            <hr>
+                            <div class="add-items d-flex">
+                                <select class="form-control" id="priority">
+                                    <option value="">Filtrar por prioridad</option>
+                                    <option value="urgente">Urgente</option>
+                                    <option value="diario">Diaria</option>
+                                    <option value="mensual">Mensual</option>
+                                </select>
+                                <input id="search" type="text" class="form-control todo-list-input ml-2"
+                                    placeholder="Titulo de la tarea que quieres buscar">
+
+                            </div>
+
+                            <hr>
+                            <div class="list-wrapper">
+                                <ul class="d-flex flex-column todo-list">
+                                    <!-- <li class="urgente completed">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="checkbox" type="checkbox" checked>
+                                                Esta tarea esta tachada
+                                                <i class="input-helper"></i>
+                                            </label>
+                                        </div>
+                                        <i class="remove mdi mdi-close-circle-outline"></i>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/controller.js"></script>
+    <script src="js/view.js"></script>
+</body>
+
+</html>

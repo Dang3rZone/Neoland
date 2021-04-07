@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion que recibe parametros</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //existen dos tipos tipos de parametros o argumentos: obligatorio u optativos
+
+        //se pueden recibir varios parametros separados por comas
+
+        //lo parametros obligatorios no se pueden no pasar a la funcion.
+
+
+        var nombreAlumno = 'Clara';
+        var apellido = 'Lopez';
+
+        function saludar(pNombre, pApellido = "Rodriguez") {
+            document.write(`<h1>Hola ${pNombre} ${pApellido} como estas</h1>`)
+        }
+
+        saludar('Juan');
+        saludar(nombreAlumno, apellido);
+        saludar('David', 'Benito');
+
+        //importante, lo parametros optativos se ponen SIEMPRE despues de todos los obligatorios.
+
+
+
+
+    </script>
+</body>
+
+</html>

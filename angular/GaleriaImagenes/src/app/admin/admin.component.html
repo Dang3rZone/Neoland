@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Url</th>
+            <th>Activa</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let imagen of imagenes">
+            <td>{{ imagen.titulo }}</td>
+            <td>{{ imagen.descripcion }}</td>
+            <td>{{ imagen.url }}</td>
+            <td>{{ imagen.activa }}</td>
+            <td>
+                <button (click)="onClickActiva(imagen)">
+                    {{ imagen.activa ? 'OFF' : 'ON' }}
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

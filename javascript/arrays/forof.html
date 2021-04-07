@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+</head>
+
+<body>
+
+    <script>
+
+        const listaCompra = new Array('Pan', 'Leche', 'Azucar', 'Carne');
+
+
+        for (let i = 0; i < listaCompra.length; i++) {
+            console.log(listaCompra[i]);
+        }
+
+        //for of - recorre la lista por mi, no le tengo que decir la posicion, solo necesito una varible donde alojar temporalmente el dato que recorro.
+
+        for (let producto of listaCompra) {
+            console.log(producto);
+        }
+
+        // array multidimension de json
+
+
+        const equipos = new Array(
+            {
+                nombre: 'Real Madrid',
+                champions: 13
+            },
+            {
+                nombre: 'Barza',
+                champions: 5
+            },
+            {
+                nombre: 'Atletico de Madrid',
+                champions: 0
+            },
+        )
+
+        for (let equipo of equipos) {
+            console.log(equipo.nombre, equipo.champions)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

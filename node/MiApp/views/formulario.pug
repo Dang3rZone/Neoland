@@ -1,0 +1,22 @@
+extends layout.pug
+
+mixin lista(arr)
+    ul
+        each item in arr
+            li= item
+        else
+            li No hay elementos
+
+block contenido
+    h2 Formulario para la creación de Estudiantes
+    p Introduce tus datos
+    div
+        +lista(['uno', 'dos', 'tres'])
+        +lista(['perro', 'gato']) 
+        +lista([]) 
+        +lista(nombres)
+    script.
+        alert('Hola PUG!');
+
+block footer
+    p Footer para el formulario

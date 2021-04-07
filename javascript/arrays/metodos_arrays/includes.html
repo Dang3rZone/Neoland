@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includes</title>
+</head>
+
+<body>
+
+    <script>
+
+        //este método es especial, por que se puede aplicar tanto a array simples como a strings. devuelve true o false
+
+        const listaNombres = new Array('juan', 'Pepe', 'Rocio', 'lucia');
+
+        let nombre = 'juan';
+
+        let resultado = listaNombres.includes(nombre);
+
+        console.log(resultado);
+
+
+        //si aplicamos a un string o cadena de caracteres.
+
+        //teneis que saber que cadena de caracteres tiene longitud
+
+        let apellido = "Perez";
+        console.log(apellido.length);
+        console.log(apellido[4]); // z
+
+        console.log(apellido.includes('P'));
+
+
+        //multidimensional
+
+        const listaAlumnos = [
+            {
+                nombre: 'Pablo',
+                edad: 38
+            },
+            {
+                nombre: 'Lucia',
+                edad: 48
+            },
+            {
+                nombre: 'Pepe',
+                edad: 65
+            },
+        ]
+        //dime todos los alumnos que empiezan por P
+
+        //no puedo aplicar directamente includes pero necesito un listado que cumpla esa condicion.
+        let letra = 'P';
+        const listaAlumnosP = listaAlumnos.filter(alumno => alumno.nombre[0].toLowerCase() == letra.toLowerCase())
+
+        console.log(listaAlumnosP);
+
+        //si quiero un listado de alumnos que tenga p
+
+        const listaAlumnosContengaP = listaAlumnos.filter(alumno => alumno.nombre.toLowerCase().includes(letra.toLowerCase()))
+
+        console.log(listaAlumnosContengaP);
+
+    </script>
+
+</body>
+
+</html>

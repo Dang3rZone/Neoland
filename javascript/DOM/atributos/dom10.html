@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 10</title>
+
+</head>
+
+<body>
+
+    <ul id="menu">
+        <!-- <li><a href="inicio.html" title="ir a inicio">INICIO</a></li> -->
+    </ul>
+
+    <script>
+
+        const secciones = new Array('inicio', 'galeria', 'contacto', 'servicios');
+
+        //title con texto que nos indique a donde vamos a ir
+        // href con el enlace al documento correspodiente 
+        // - inicio -> inicio.html
+
+        //capturar los elementos con los que interactuo.
+
+        let menu = document.getElementById('menu');
+        let lis = "";
+        for (let seccion of secciones) {
+            lis += `<li><a href="${seccion}.html" title="ir a ${seccion}">${seccion.toUpperCase()}</a></li>`;
+        }
+
+        menu.innerHTML = lis;
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

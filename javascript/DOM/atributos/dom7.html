@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 5</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="http://amazon.es">Amazon</a></li>
+        <li><a href="http://google.es">Google</a></li>
+        <li><a href="http://yahoo.es">Yahoo</a></li>
+    </ul>
+
+
+    <script>
+
+        //quiero cambiar el enlace de cada uno de los botones
+
+        let enlaces = document.querySelectorAll('#menu a');
+        let contador = 2;
+        for (let enlace of enlaces) {
+            if (contador >= 1) {
+                enlace.href = 'http://www.estudioclandestino.es';
+                //tambien puedo añadir
+                enlace.target = "_blanck"
+            }
+            contador--;
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

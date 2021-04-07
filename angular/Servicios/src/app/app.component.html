@@ -1,0 +1,12 @@
+<button (click)="onClick();">
+  {{ mostrarActivos ? 'TODOS' : 'ACTIVOS' }}
+</button>
+<input type="range" min="10" max="100" step="1" (input)="onChange($event)">
+<button (click)="onClickMenores30()">MENORES 30</button>
+<div class="personas">
+  <div class="persona" *ngFor="let persona of listaPersonas">
+    <p>{{ persona.nombre }} {{ persona.apellidos }}</p>
+    <p>{{ persona.email }}</p>
+    <p>{{ persona.edad }}</p>
+  </div>
+</div>

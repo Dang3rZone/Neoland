@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 9</title>
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <figure>
+        <img src="img/david.jpg">
+    </figure>
+
+    <script>
+        //una funcion que me permita cambiar la imagen de img
+        let img = document.querySelector('figure img');
+
+        let listaImagenes = new Array('david.jpg', 'samantha.jpg', 'superfragilistico.jpg')
+
+        function cambiarImagen(pImagen) {
+            img.src = `img/${pImagen}`;
+        }
+
+        //carrusel automatico de fotos lo que quiero es que la imagenes pasen solas cada x segundos
+
+        //funciones intervalicas:se ejecutan cada x milisegundos. existen dos funciones intervalicas
+
+        //setTimeout() se le pasa dos parametros a la funcion el primero callback, es tiempo que va tardar en ejecutar dicho callback. SOLO SE LANZA UNA VEZ
+
+        //setInterval() tambien se le pasa dos parametros, el primero es un callback y el segundo igualmente el tiempo. Que se ejecuta cada x tiempo
+
+        //buenas practicas para el uso de estas funciones. Siempre debemos guardarlas en un variable o const.
+        let numeroImagen = 0;
+        let intervalo = setInterval(() => {
+
+            numeroImagen = (numeroImagen >= listaImagenes.length - 1) ? 0 : numeroImagen + 1;
+
+            cambiarImagen(listaImagenes[numeroImagen])
+        }, 2000)
+
+
+
+    </script>
+
+</body>
+
+</html>

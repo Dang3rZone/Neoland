@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <h1>Restaurante - Carta</h1>
+
+    <!-- tanto los form como los a de enlace tiene una opcion por defecto que hay que bloquear inicialmente -->
+    <form action="">
+        <select id="platos">
+            <option value="" selected>Selecciona un plato</option>
+            <option value="23">Carne</option>
+            <option value="15">Pescado</option>
+        </select>
+        <input type="checkbox" id="postre"> <label>¿deseas postre?</label>
+        <input type="submit" value="Enviar" id="btn">
+    </form>
+    <h2 id="bill"></h2>
+
+
+    <script>
+        //lo primero capturamos los elementos con los que interactuamos
+        let select = document.querySelector('#platos');
+        let checkbox = document.querySelector('#postre');
+        let btn = document.querySelector('#btn');
+        let bill = document.querySelector('#bill');
+
+        //quien lanza el evento y que informacion recoge
+
+        btn.addEventListener('click', getData);
+
+        function getData(event) {
+            //necesito informacion del btn - no. Pero necesito bloquear la accion por defecto del formulario.
+            event.preventDefault();
+
+            let plato = parseFloat(select.value);
+            let postre = checkbox.checked; //si esta check me devuelve true y si no me devuelve false.
+
+            let precioPostre = (postre == true) ? 3 : 0;
+
+            let myBill = calculateBill(plato, precioPostre);
+            bill.innerText = myBill;
+        }
+
+
+        function calculateBill(pPrice, pPriceDessert) {
+            const tip = 0.10;
+            let result = ((pPrice + pPriceDessert) * tip) + pPrice + pPriceDessert;
+
+            return result;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

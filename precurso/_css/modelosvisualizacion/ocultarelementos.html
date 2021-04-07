@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar elementos</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            background-color: black;
+            color: white;
+            padding: 20px 0px 20px 20px;
+            margin: 10px;
+            border: 2px solid red;
+        }
+
+        .caja1 {
+            display: none;
+            /* oculta y deja espacio libre */
+        }
+
+        .caja2 {
+            visibility: hidden;
+            /* solo ocultan*/
+        }
+
+        .caja3 {
+            opacity: 0.5;
+            /*valores entre 0 y 1 */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="caja1">
+        1 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis itaque quis vitae ad aliquam maxime.
+    </div>
+
+    <div class="caja2">
+        2 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis itaque quis vitae ad aliquam maxime.
+    </div>
+    <div class="caja3">
+        3 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis itaque quis vitae ad aliquam maxime.
+    </div>
+
+</body>
+
+</html>
